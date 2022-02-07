@@ -8,7 +8,7 @@ namespace DmsBackOffice
 {
     static class Program
     {
-        /// <summary>
+        /// <summaryii>
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
