@@ -11,9 +11,14 @@ namespace Dms_Testing
         public void TestMethod1()
         {
             //create an instance of the class we want to create
-            clsExpenses AnExpenses = new clsExpenses();
+            clsOrder AnExpenses = new clsOrder();
             //test to see that is exists
             Assert.IsNotNull(AnExpenses);
         }
+    }
+
+    public class   clsOrder
+    {
+        
     }
 }
