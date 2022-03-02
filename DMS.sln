@@ -3,11 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DmsBackOffice", "DmsBackOffice\DmsBackOffice.csproj", "{4D8B91CC-95EA-4A5D-957D-ECAFAFF8EC40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DmsBackOffice", "DmsBackOffice\DmsBackOffice.csproj", "{4D8B91CC-95EA-4A5D-957D-ECAFAFF8EC40}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DmsFrontOffice", "DmsFrontOffice\", "{18A33BBC-8D0E-4D91-AA8B-34C7DBE95B95}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		ProjectReferences = "{756d5c20-a961-4f41-9ab9-2c1a4a737bc5}|DmsClasses.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50150"
 		Debug.AspNetCompiler.PhysicalPath = "DmsFrontOffice\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50150\"
