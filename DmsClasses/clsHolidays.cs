@@ -8,12 +8,97 @@ namespace DmsClasses
 {
     public class clsHolidays
     {
-        public int EmpID { get; set; }
-        public string EmpName { get; set; }
-        public string EmpDepart { get; set; }
-        public string Reason { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        //private data member for the EmpId property
+        private Int32 mEmpID;
+        public Int32 EmpID {
+            get
+            {
+                //this line of code sends data out of the property
+                return mEmpID;
+            }
+            set
+            {
+                //this lone of code allows data into the property
+                mEmpID = value; 
+            } 
+        }
+
+        private string mEmpName;
+        public string EmpName { 
+            get
+            {
+                //this line of code sends data out of the property
+                return mEmpName;
+            }
+            set
+            {
+                //this lone of code allows data into the property
+                mEmpName = value; 
+            } 
+        }
+
+        private string mEmpDepart;
+        public string EmpDepart {
+            get
+            {
+                //this line of code sends data out of the property
+                return mEmpDepart; }
+            set 
+            {
+                //this lone of code allows data into the property
+                mEmpDepart = value; } 
+        }
+
+        private string mReason;
+        public string Reason {
+            get
+            {
+                //this line of code sends data out of the property
+                return mReason; 
+            }
+            set
+            {
+                //this lone of code allows data into the property
+                mReason = value; } 
+        }
+
+
+        //private DateTime mStartDate;
+        public DateTime StartDate {
+            get;
+            //{
+            //    return mStartDate; 
+            //}
+            set;
+            //{
+            //    mStartDate = value; 
+            //} 
+        }
+
+        //private DateTime mEndDate;
+        public DateTime EndDate {
+            get;
+            //{
+            //  return mEndDate; 
+            //}
+            set;
+            //{
+            //  mEndDate = value; 
+            //} 
+        }
+
+        public bool Find(int empID)
+        {
+            // set the private data members to test data value
+            mEmpID = 22;
+            mEmpName = "Ali";
+            mEmpDepart = "IT";
+            mReason = "Fever";
+            //mStartDate = Convert.ToDateTime("09/03/2021");
+            //mEndDate = Convert.ToDateTime("15/03/2021");
+            //always return true
+            return true;
+        }
     }
 
   
