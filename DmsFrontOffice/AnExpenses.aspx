@@ -72,7 +72,7 @@
         .auto-style11 {
             position: absolute;
             top: 136px;
-            left: 9px;
+            left: 8px;
             z-index: 1;
         }
     </style>
