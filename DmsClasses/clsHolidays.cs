@@ -63,28 +63,28 @@ namespace DmsClasses
         }
 
 
-        //private DateTime mStartDate;
+        private DateTime mStartDate;
         public DateTime StartDate {
-            get;
-            //{
-            //    return mStartDate; 
-            //}
-            set;
-            //{
-            //    mStartDate = value; 
-            //} 
+            get
+            {
+                return mStartDate;
+            }
+            set
+            {
+                mStartDate = value;
+            }
         }
 
-        //private DateTime mEndDate;
+        private DateTime mEndDate;
         public DateTime EndDate {
-            get;
-            //{
-            //  return mEndDate; 
-            //}
-            set;
-            //{
-            //  mEndDate = value; 
-            //} 
+            get
+            {
+                return mEndDate;
+            }
+            set
+            {
+                mEndDate = value;
+            }
         }
 
         public bool Find(int empID)
@@ -94,8 +94,8 @@ namespace DmsClasses
             mEmpName = "Ali";
             mEmpDepart = "IT";
             mReason = "Fever";
-            //mStartDate = Convert.ToDateTime("09/03/2021");
-            //mEndDate = Convert.ToDateTime("15/03/2021");
+            mStartDate = Convert.ToDateTime("09/03/2021");
+            mEndDate = Convert.ToDateTime("05/03/2021");
             //always return true
             return true;
         }
@@ -103,3 +103,5 @@ namespace DmsClasses
 
   
 }
+
+
