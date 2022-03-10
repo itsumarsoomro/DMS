@@ -29,6 +29,8 @@
             <asp:Label ID="lblId" runat="server" Text="Employee ID"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtId" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;
+            <asp:Button ID="btnFind" runat="server" OnClick="Button1_Click" Text="Find" Width="82px" />
             <br />
             <asp:Label ID="lblName" runat="server" Text="Employee Name"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
