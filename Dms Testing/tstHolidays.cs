@@ -120,11 +120,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 22;
+            Int32 EmpID = 1;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EmpID != 22)
+            if (AnHolidays.EmpID != 1)
             {
                 OK = false;
             }
@@ -142,11 +142,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 22;
+            Int32 EmpID = 1;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EmpName != "Ali")
+            if (AnHolidays.EmpName != "Umar")
             {
                 OK = false;
             }
@@ -164,7 +164,7 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 22;
+            Int32 EmpID = 1;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
@@ -186,7 +186,7 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 22;
+            Int32 EmpID = 1;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
@@ -208,11 +208,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 22;
+            Int32 EmpID = 1;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.StartDate != Convert.ToDateTime("09/03/2021"))
+            if (AnHolidays.StartDate != Convert.ToDateTime("12/03/2022"))
             {
                 OK = false;
             }
@@ -230,11 +230,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 22;
+            Int32 EmpID = 1;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EndDate != Convert.ToDateTime("05/03/2021"))
+            if (AnHolidays.EndDate != Convert.ToDateTime("03/15/2022"))
             {
                 OK = false;
             }
