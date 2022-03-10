@@ -87,17 +87,42 @@ namespace DmsClasses
             }
         }
 
-        public bool Find(int empID)
+        public bool Find(Int32 EmpID)
         {
-            // set the private data members to test data value
-            mEmpID = 22;
-            mEmpName = "Ali";
-            mEmpDepart = "IT";
-            mReason = "Fever";
-            mStartDate = Convert.ToDateTime("09/03/2021");
-            mEndDate = Convert.ToDateTime("05/03/2021");
-            //always return true
-            return true;
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the address no to search for
+            DB.AddParameter("@EmpID", EmpID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblHolidays_FilterByEmpID");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                mEmpID = Convert.ToInt32(DB.DataTable.Rows[0]["EmpID"]);
+                mEmpName = Convert.ToString(DB.DataTable.Rows[0]["EmpName"]);
+                mEmpDepart = Convert.ToString(DB.DataTable.Rows[0]["Department"]);
+                mReason = Convert.ToString(DB.DataTable.Rows[0]["Reason"]);
+                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["StartDate"]);
+                mEndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["EndDate"]);
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return flase indicating a problem
+                return false;
+            }
+
+            //// set the private data members to test data value
+            //mEmpID = 22;
+            //mEmpName = "Ali";
+            //mEmpDepart = "IT";
+            //mReason = "Fever";
+            //mStartDate = Convert.ToDateTime("09/03/2021");
+            //mEndDate = Convert.ToDateTime("05/03/2021");
+            ////always return true
+            //return true;
         }
     }
 
