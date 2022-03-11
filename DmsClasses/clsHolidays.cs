@@ -124,9 +124,110 @@ namespace DmsClasses
             ////always return true
             //return true;
         }
+
+        public string Valid(string empName, string empDepart, string reason, string startDate, string enDate)
+          
+        {
+            //create a string to store the error
+            string Error = "";
+            //create a temporary variable to store the date values
+            DateTime DateTemp;
+            //if the employee name is blank
+            if (empName.Length == 0)
+            {
+                //record the errror
+                Error = Error + "The employee name may not be blank : ";
+                
+                   }
+            //if the employee name is larger than 50 characters
+            if(empName.Length > 19)
+            {
+                //record the error
+                Error = Error + "The employee name should be less than 19 characters : ";
+            }
+
+
+
+            //if the employee department is blank
+            if (empDepart.Length == 0)
+            {
+                //record the errror
+                Error = Error + "The employee department may not be blank : ";
+
+            }
+            //if the employee department is larger than 50 characters
+            if (empDepart.Length > 20)
+            {
+                //record the error
+                Error = Error + "The employee name should be less than 20 characters : ";
+            }
+
+
+
+            //if the reason is blank
+            if (reason.Length == 0)
+            {
+                //record the errror
+                Error = Error + "The reason may not be blank : ";
+
+            }
+            //if the reason is larger than 50 characters
+            if (reason.Length > 20)
+            {
+                //record the error
+                Error = Error + "The reason should be less than 20 characters : ";
+            }
+
+
+            //cppy the date added value to  the datetemp variable 
+            DateTemp = Convert.ToDateTime(startDate);
+            if (DateTemp < DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be so old : ";
+            }
+
+            ////check to see if the date is greater than today's date
+            //if (DateTemp > DateTime.Now.Date)
+            //{
+            //    //record the error
+            //    Error = Error + "The date cannot be in the future : ";
+            //}
+
+
+            //try
+            //{
+            //    //copy the dateAdded value to the DateTemp variable
+            //    DateTemp = Convert.ToDateTime(startDate);
+            //    if (DateTemp < DateTime.Now.Date)
+            //    {
+            //        //record the error
+            //        Error = Error + "The date cannot be in the past : ";
+            //    }
+            //    //check to see if the date is greater than today's date
+            //    if (DateTemp > DateTime.Now.Date)
+            //    {
+            //        //record the error
+            //        Error = Error + "The date cannot be in the future : ";
+            //    }
+            //}
+            //catch
+            //{
+            //    //record the error
+            //    Error = Error + "The date was not a valid date : ";
+            //}
+
+            //return any errors
+            return Error;
+
+        }
     }
 
-  
-}
+    
+
+    }
+
+
+
 
 
