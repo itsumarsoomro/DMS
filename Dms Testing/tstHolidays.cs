@@ -95,152 +95,152 @@ namespace Dms_Testing
             Assert.AreEqual(AnHolidays.EndDate, TestData);
         }
 
-        //[TestMethod]
-        //public void FoundMethodOK()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //create some test data to use with method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //test to see if the result is true
-        //    Assert.IsTrue(Found);
-        //}
+        [TestMethod]
+        public void FoundMethodOK()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //create some test data to use with method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //test to see if the result is true
+            Assert.IsTrue(Found);
+        }
 
-        //[TestMethod]
-        //public void TestEmployeeidFound()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //bollean variable to record if data is ok(assume it is)
-        //    Boolean OK = true;
-        //    //create some test data to use with the method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //check the Emp ID
-        //    if (AnHolidays.EmpID != 1)
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that the result is correct
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void TestEmployeeidFound()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //bollean variable to record if data is ok(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //check the Emp ID
+            if (AnHolidays.EmpID != 1)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
-        //[TestMethod]
-        //public void TestEmployeeNameFound()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //bollean variable to record if data is ok(assume it is)
-        //    Boolean OK = true;
-        //    //create some test data to use with the method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //check the Emp ID
-        //    if (AnHolidays.EmpName != "Umar")
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that the result is correct
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void TestEmployeeNameFound()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //bollean variable to record if data is ok(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //check the Emp ID
+            if (AnHolidays.EmpName != "Umar")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
-        //[TestMethod]
-        //public void TestDepartmentFound()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //bollean variable to record if data is ok(assume it is)
-        //    Boolean OK = true;
-        //    //create some test data to use with the method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //check the Emp ID
-        //    if (AnHolidays.EmpDepart != "IT")
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that the result is correct
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void TestDepartmentFound()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //bollean variable to record if data is ok(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //check the Emp ID
+            if (AnHolidays.EmpDepart != "IT")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
-        //[TestMethod]
-        //public void TestReasonFound()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //bollean variable to record if data is ok(assume it is)
-        //    Boolean OK = true;
-        //    //create some test data to use with the method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //check the Emp ID
-        //    if (AnHolidays.Reason != "Fever")
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that the result is correct
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void TestReasonFound()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //bollean variable to record if data is ok(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //check the Emp ID
+            if (AnHolidays.Reason != "Fever")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
-        //[TestMethod]
-        //public void TestHolidayStartDateFound()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //bollean variable to record if data is ok(assume it is)
-        //    Boolean OK = true;
-        //    //create some test data to use with the method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //check the Emp ID
-        //    if (AnHolidays.StartDate != Convert.ToDateTime("12/03/2022"))
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that the result is correct
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void TestHolidayStartDateFound()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //bollean variable to record if data is ok(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //check the Emp ID
+            if (AnHolidays.StartDate != Convert.ToDateTime("12/03/2022"))
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
-        //[TestMethod]
-        //public void TestHolidayEndDateFound()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //bollean variable to store the results of the validation
-        //    Boolean Found = false;
-        //    //bollean variable to record if data is ok(assume it is)
-        //    Boolean OK = true;
-        //    //create some test data to use with the method
-        //    Int32 EmpID = 1;
-        //    //invoke the method
-        //    Found = AnHolidays.Find(EmpID);
-        //    //check the Emp ID
-        //    if (AnHolidays.EndDate != Convert.ToDateTime("03/15/2022"))
-        //    {
-        //        OK = false;
-        //    }
-        //    //test to see that the result is correct
-        //    Assert.IsTrue(OK);
-        //}
+        [TestMethod]
+        public void TestHolidayEndDateFound()
+        {
+            //create an instance of the class we want to create 
+            clsHolidays AnHolidays = new clsHolidays();
+            //bollean variable to store the results of the validation
+            Boolean Found = false;
+            //bollean variable to record if data is ok(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 EmpID = 1;
+            //invoke the method
+            Found = AnHolidays.Find(EmpID);
+            //check the Emp ID
+            if (AnHolidays.EndDate != Convert.ToDateTime("15/03/2022"))
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
 
 
@@ -667,27 +667,26 @@ namespace Dms_Testing
 
 
 
-        [TestMethod]
-        public void StartDateExtremeMin()
-        {
-            //instance of the class
-            clsHolidays AnHolidays = new clsHolidays();
-            //create a string variable to store the result of validation
-            string Error = "";
-            // create a variable to store the test data
-            DateTime TestDate;
-            //set the date to todys date
-            TestDate = DateTime.Now.Date;
-            //change the data whatever the date in 100 years ago
-            TestDate = TestDate.AddYears(-100);
-            //convert the date time to string variable
-            string startDate = TestDate.ToString();
-            //invoke the method
-            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
-            //test to see that the result is correct
-            Assert.AreNotEqual(Error, "");
-        }
-
+        //[TestMethod]
+        //public void StartDateExtremeMin()
+        //{
+        //    //instance of the class
+        //    clsHolidays AnHolidays = new clsHolidays();
+        //    //create a string variable to store the result of validation
+        //    string Error = "";
+        //    // create a variable to store the test data
+        //    DateTime TestDate;
+        //    //set the date to todys date
+        //    TestDate = DateTime.Now.Date;
+        //    //change the data whatever the date in 100 years ago
+        //    TestDate = TestDate.AddYears(-100);
+        //    //convert the date time to string variable
+        //    string startDate = TestDate.ToString();
+        //    //invoke the method
+        //    Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+        //    //test to see that the result is correct
+        //    Assert.AreNotEqual(Error, "");
+        //}
 
         //[TestMethod]
         //public void StartDateMinLessOne()
@@ -709,8 +708,6 @@ namespace Dms_Testing
         //    //test to see that the result is correct
         //    Assert.AreNotEqual(Error, "");
         //}
-
-
 
         //[TestMethod]
         //public void StartDateMin()
