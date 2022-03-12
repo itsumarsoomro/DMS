@@ -22,7 +22,7 @@ namespace Dms_Testing
         {
             clsTask AnDMS = new clsTask();
             String TestData;
-            TestData = "Current Task";
+            TestData = "500 word essay";
             AnDMS.TaskName = TestData;
             Assert.AreEqual(AnDMS.TaskName, TestData);
         }
