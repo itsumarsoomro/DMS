@@ -22,11 +22,46 @@ public partial class AnHolidays : System.Web.UI.Page
         //create a new instance of clsHolidays
         clsHolidays AnHolidays = new clsHolidays();
         //capture the Emp Name
-        AnHolidays.EmpName = txtName.Text;
-        //store the Id in the session object
-        Session["AnHolidays"] = AnHolidays;
-        //redirect to the viewer page
-        Response.Redirect("HolidaysViewer.aspx");
+        string EmpName = txtName.Text;
+        //capture the Employee department
+        string EmpDepart = txtDepartment.Text;
+        //capture the reason
+        string Reason = txtReason.Text;
+        //capture the start date
+        string StartDate = txtStartdate.Text;
+        //capture the end date
+        string EndDate = txtEndate.Text;
+
+        //varaiable to store any error message
+        string Error = "";
+
+        Error = AnHolidays.Valid(EmpName, EmpDepart, Reason, StartDate, EndDate);
+        
+        if (Error == "")
+        {
+            //capture the employee name 
+            AnHolidays.EmpName = EmpName;
+            //capture the employee department
+            AnHolidays.EmpDepart = EmpDepart;
+            //capture the reason
+            AnHolidays.Reason = Reason;
+            //capture the start date 
+            AnHolidays.StartDate = Convert.ToDateTime(StartDate);
+            //capture the end date
+            AnHolidays.EndDate = Convert.ToDateTime(EndDate);
+
+            //stpre the holiday in session object
+            Session["AnHolidays"] = AnHolidays;
+            //redirect to the viewer page
+            Response.Redirect("HolidaysViewer.aspx");
+
+        }
+      
+        else
+        {
+            //display the error message
+            lblError.Text = Error;
+        }
 
     }
 
@@ -54,6 +89,12 @@ public partial class AnHolidays : System.Web.UI.Page
             txtStartdate.Text = AnHolidays.StartDate.ToString();
             txtEndate.Text = AnHolidays.EndDate.ToString();
         }
+        //if not found
 
+        else
+        {
+            //return error message
+            lblError.Text = "This Employee ID does not exist please try again later.";
+        }
     }
 }

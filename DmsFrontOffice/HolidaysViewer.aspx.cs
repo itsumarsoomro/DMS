@@ -14,7 +14,13 @@ public partial class HolidaysViewer : System.Web.UI.Page
         clsHolidays AnHolidays = new clsHolidays();
         //get the data from the session object
         AnHolidays = (clsHolidays)Session["AnHolidays"];
+
         //display the Employee name for this entry
-        Response.Write(AnHolidays.EmpName);
+
+        Response.Write(AnHolidays.EmpName);       
+        Response.Write(AnHolidays.EmpDepart); 
+        Response.Write(AnHolidays.Reason); 
+        Response.Write(AnHolidays.StartDate);
+        Response.Write(AnHolidays.EndDate);
     }
 }
