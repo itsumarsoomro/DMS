@@ -103,8 +103,8 @@ namespace DmsClasses
                 mEmpName = Convert.ToString(DB.DataTable.Rows[0]["EmpName"]);
                 mEmpDepart = Convert.ToString(DB.DataTable.Rows[0]["Department"]);
                 mReason = Convert.ToString(DB.DataTable.Rows[0]["Reason"]);
-                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["StartDate"]);
-                mEndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["EndDate"]);
+                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayStartDate"]);
+                mEndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayEndDate"]);
                 return true;
             }
             //if no record was found
