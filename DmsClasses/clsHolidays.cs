@@ -179,13 +179,13 @@ namespace DmsClasses
             }
 
 
-            //cppy the date added value to  the datetemp variable 
-            DateTemp = Convert.ToDateTime(startDate);
-            if (DateTemp < DateTime.Now.Date)
-            {
-                //record the error
-                Error = Error + "The date cannot be so old : ";
-            }
+            ////cppy the date added value to  the datetemp variable 
+            //DateTemp = Convert.ToDateTime(startDate);
+            //if (DateTemp < DateTime.Now.Date)
+            //{
+            //    //record the error
+            //    Error = Error + "The date cannot be so old : ";
+            //}
 
             ////check to see if the date is greater than today's date
             //if (DateTemp > DateTime.Now.Date)
