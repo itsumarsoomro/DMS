@@ -390,7 +390,7 @@ namespace Dms_Testing
             //create test data
             string empName = "";
             empName = empName.PadRight(200, 'a'); //this should fail
-           //assign test data to property
+                                                  //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
             Assert.AreNotEqual(Error, "");
@@ -401,7 +401,7 @@ namespace Dms_Testing
 
 
 
-    //Employee department validation testing
+        //Employee department validation testing
 
 
 
@@ -474,7 +474,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empDepart = "01234567890123456789";
+            string empDepart = "abcdefghjiklmnopqrst";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -521,7 +521,7 @@ namespace Dms_Testing
             //create test data
             string empDepart = "";
             empDepart = empDepart.PadRight(200, 'a'); //this should fail
-                                                  //assign test data to property
+                                                      //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
             Assert.AreNotEqual(Error, "");
@@ -667,109 +667,257 @@ namespace Dms_Testing
 
 
 
-        //[TestMethod]
-        //public void StartDateExtremeMin()
-        //{
-        //    //instance of the class
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //create a string variable to store the result of validation
-        //    string Error = "";
-        //    // create a variable to store the test data
-        //    DateTime TestDate;
-        //    //set the date to todys date
-        //    TestDate = DateTime.Now.Date;
-        //    //change the data whatever the date in 100 years ago
-        //    TestDate = TestDate.AddYears(-100);
-        //    //convert the date time to string variable
-        //    string startDate = TestDate.ToString();
-        //    //invoke the method
-        //    Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
-        //}
+        [TestMethod]
+        public void StartDateExtremeMin()
+        {
+            //instance of the class
+            clsHolidays AnHolidays = new clsHolidays();
+            //create a string variable to store the result of validation
+            string Error = "";
+            // create a variable to store the test data
+            DateTime TestDate;
+            //set the date to todys date
+            TestDate = DateTime.Now.Date;
+            //change the data whatever the date in 100 years ago
+            TestDate = TestDate.AddYears(-100);
+            //convert the date time to string variable
+            string startDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-        //[TestMethod]
-        //public void StartDateMinLessOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create a variable to store the test date data
-        //    DateTime TestDate;
-        //    //set the date totodays date
-        //    TestDate = DateTime.Now.Date;
-        //    //change the date to whatever the date is less 1 day
-        //    TestDate = TestDate.AddDays(-1);
-        //    //convert the date variable to a string variable
-        //    string startDate = TestDate.ToString();
-        //    //invoke the method
-        //    Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
-        //}
+        [TestMethod]
+        public void StartDateMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less 1 day
+            TestDate = TestDate.AddDays(-1);
+            //convert the date variable to a string variable
+            string startDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-        //[TestMethod]
-        //public void StartDateMin()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create a variable to store the test date data
-        //    DateTime TestDate;
-        //    //set the date totodays date
-        //    TestDate = DateTime.Now.Date;
-        //    //convert the date variable to a string variable
-        //    string startDate = TestDate.ToString();
-        //    //invoke the method
-        //    Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
-        //    //test to see that the result is correct
-        //    Assert.AreEqual(Error, "");
-        //}
+        [TestMethod]
+        public void StartDateMin()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //convert the date variable to a string variable
+            string startDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
 
-        //[TestMethod]
-        //public void StartDateMinPlusOne()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create a variable to store the test date data
-        //    DateTime TestDate;
-        //    //set the date totodays date
-        //    TestDate = DateTime.Now.Date;
-        //    //change the date to whatever the date is plus 1 day
-        //    TestDate = TestDate.AddDays(1);
-        //    string startDate = TestDate.ToString();
-        //    //invoke the method
-        //    Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
-        //}
+        [TestMethod]
+        public void StartDateMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 1 day
+            TestDate = TestDate.AddDays(1);
+            //convert the date variable to a string variable
+            string startDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-        //[TestMethod]
-        //public void StartDateExtremeMax()
-        //{
-        //    //create an instance of the class we want to create
-        //    clsHolidays AnHolidays = new clsHolidays();
-        //    //string variable to store any error message
-        //    String Error = "";
-        //    //create a variable to store the test date data
-        //    DateTime TestDate;
-        //    //set the date totodays date
-        //    TestDate = DateTime.Now.Date;
-        //    //change the date to whatever the date is plus 100 years
-        //    TestDate = TestDate.AddYears(100);
-        //    //convert the date variable to a string variable
-        //    string startDate = TestDate.ToString();
-        //    //invoke the method
-        //    Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
-        //    //test to see that the result is correct
-        //    Assert.AreNotEqual(Error, "");
-        //}
+        [TestMethod]
+        public void StartDateExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 100 years
+            TestDate = TestDate.AddYears(100);
+            //convert the date variable to a string variable
+            string startDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
 
-        ///
+        [TestMethod]
+        public void InvalidStartDate()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass method
+            String empName = "Umar";
+            String empDepart = "IT";
+            String reason = "Fever";
+            String enDate = "15/03/2022";
+            //set a startDate to no date value
+            String startDate = "This is not a date!";
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
+
+
+        //EndDate Validation testing
+
+
+        [TestMethod]
+        public void EndDateExtremeMin()
+        {
+            //instance of the class
+            clsHolidays AnHolidays = new clsHolidays();
+            //create a string variable to store the result of validation
+            string Error = "";
+            // create a variable to store the test data
+            DateTime TestDate;
+            //set the date to todys date
+            TestDate = DateTime.Now.Date;
+            //change the data whatever the date in 100 years ago
+            TestDate = TestDate.AddYears(-100);
+            //convert the date time to string variable
+            string enDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EndDateMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is less 1 day
+            TestDate = TestDate.AddDays(-1);
+            //convert the date variable to a string variable
+            string enDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EndDateMin()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //convert the date variable to a string variable
+            string enDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EndDateMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 1 day
+            TestDate = TestDate.AddDays(1);
+            //convert the date variable to a string variable
+            string enDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void EndDateExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create a variable to store the test date data
+            DateTime TestDate;
+            //set the date totodays date
+            TestDate = DateTime.Now.Date;
+            //change the date to whatever the date is plus 100 years
+            TestDate = TestDate.AddYears(100);
+            //convert the date variable to a string variable
+            string enDate = TestDate.ToString();
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void InvalidEndDate()
+        {
+            //create an instance of the class we want to create
+            clsHolidays AnHolidays = new clsHolidays();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass method
+            String empName = "Umars";
+            String empDepart = "ITms";
+            String reason = "Fever";
+            String startDate = "20/03/2022";
+            //set a startDate to no date value
+            String enDate = "This is not a date!";
+            //invoke the method
+            Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+
+        }
 
     }
 }
