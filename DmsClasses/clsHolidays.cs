@@ -130,8 +130,7 @@ namespace DmsClasses
         {
             //create a string to store the error
             string Error = "";
-            //create a temporary variable to store the date values
-            DateTime DateTemp;
+          
             //if the employee name is blank
             if (empName.Length == 0)
             {
@@ -178,45 +177,90 @@ namespace DmsClasses
                 Error = Error + "The reason should be less than 20 characters : ";
             }
 
+            //create a temporary variable to store the test date data
+            DateTime DateTemp;
+          
+            //copy the date added value to date temp
+            DateTemp = Convert.ToDateTime(startDate);
 
-            ////cppy the date added value to  the datetemp variable 
-            //DateTemp = Convert.ToDateTime(startDate);
-            //if (DateTemp < DateTime.Now.Date)
-            //{
-            //    //record the error
-            //    Error = Error + "The date cannot be so old : ";
-            //}
+            if (DateTemp < DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be so old : ";
+            }
 
-            ////check to see if the date is greater than today's date
-            //if (DateTemp > DateTime.Now.Date)
-            //{
-            //    //record the error
-            //    Error = Error + "The date cannot be in the future : ";
-            //}
+            //check to see if the date is greater than today's date
+            if (DateTemp > DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be in the future : ";
+            }
 
 
-            //try
-            //{
-            //    //copy the dateAdded value to the DateTemp variable
-            //    DateTemp = Convert.ToDateTime(startDate);
-            //    if (DateTemp < DateTime.Now.Date)
-            //    {
-            //        //record the error
-            //        Error = Error + "The date cannot be in the past : ";
-            //    }
-            //    //check to see if the date is greater than today's date
-            //    if (DateTemp > DateTime.Now.Date)
-            //    {
-            //        //record the error
-            //        Error = Error + "The date cannot be in the future : ";
-            //    }
-            //}
-            //catch
-            //{
-            //    //record the error
-            //    Error = Error + "The date was not a valid date : ";
-            //}
+            try
+            {
+                //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(startDate);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
 
+
+            //create a temporary variable to store the test date data
+            //DateTime DateTemp;
+
+            //copy the date added value to date temp
+            DateTemp = Convert.ToDateTime(enDate);
+
+            if (DateTemp < DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be so old : ";
+            }
+
+            //check to see if the date is greater than today's date
+            if (DateTemp > DateTime.Now.Date)
+            {
+                //record the error
+                Error = Error + "The date cannot be in the future : ";
+            }
+
+
+            try
+            {
+                //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(enDate);
+                if (DateTemp < DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > DateTime.Now.Date)
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
             //return any errors
             return Error;
 
