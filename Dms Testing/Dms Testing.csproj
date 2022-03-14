@@ -52,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstExpenses.cs" />
     <Compile Include="tstHolidays.cs" />
+    <Compile Include="tstHolidaysCollection.cs" />
     <Compile Include="tstTask.cs" />
   </ItemGroup>
   <ItemGroup>
