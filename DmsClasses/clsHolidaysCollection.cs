@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DmsClasses
 {
@@ -56,5 +57,44 @@ namespace DmsClasses
             }
         }
         public clsHolidays ThisHoliday { get; set; }
+
+        public clsHolidaysCollection()
+        {
+            //objcetv for data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure
+            DB.Execute("sproc_tblHolidays_SelectAll");
+            //populate the array list with data table
+            PopulateArray(DB);
+        }
+
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populate the array list based on the data table in the parameter DB
+            //var for the index
+            int Index = 0;
+            //var to store the record count 
+            int RecordsCount = 0;
+            //get the count of records
+            RecordsCount = DB.Count;
+            //clear the private array list
+            mHolidayList = new List<clsHolidays>();
+            //while there are records to process
+            while (Index < RecordsCount)
+            {
+                //create a blank Holiday
+                clsHolidays AllHoliday = new clsHolidays();
+                //read in the fields from the current records
+                AllHoliday.EmpID = Convert.ToInt32(DB.DataTable.Rows[Index]["EmpID"]);
+                AllHoliday.EmpName = Convert.ToString(DB.DataTable.Rows[0]["EmpName"]);
+                AllHoliday.EmpDepart = Convert.ToString(DB.DataTable.Rows[0]["Department"]);
+                AllHoliday.Reason = Convert.ToString(DB.DataTable.Rows[0]["Reason"]);
+                AllHoliday.StartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayStartDate"]);
+                //add the record to the private data memberv
+                mHolidayList.Add(AllHoliday);
+                //point at the record
+                Index++;
+            }
+        }
     }
 }

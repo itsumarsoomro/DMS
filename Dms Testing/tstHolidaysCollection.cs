@@ -76,31 +76,31 @@ namespace Dms_Testing
             Assert.AreEqual(AllHolidays.ThisHoliday, TestHolidays);
         }
 
-        //[TestMethod]
-        //public void ListAndCountOK()
-        //{
-        //    //create ab instance of the class we want to create
-        //    clsHolidaysCollection AllHolidays = new clsHolidaysCollection();
-        //    //create some test data to assign to the property
-        //    //in this case the data needs to be a list of objects
-        //    List<clsHolidays> TestList = new List<clsHolidays>();
-        //    //add an item to the list
-        //    //create the item of test data
-        //    clsHolidays TestItem = new clsHolidays();
-        //    //set its properties
-        //    TestItem.EmpID = 1;
-        //    TestItem.EmpName = "Oxe";
-        //    TestItem.EmpDepart = "Health";
-        //    TestItem.Reason = "Health issues";
-        //    TestItem.StartDate = DateTime.Now.Date;
-        //    //TestItem.enDate = DateTime.Now.Date;
-        //    ///add the item to the test list
-        //    TestList.Add(TestItem);
-        //    //assign the data to the property
-        //    AllHolidays.HolidaysList = TestList;
-        //    //test to see that te two values are the same
-        //    Assert.AreEqual(AllHolidays.Count, TestList.Count);
-        //}
+        [TestMethod]
+        public void ListAndCountOK()
+        {
+            //create ab instance of the class we want to create
+            clsHolidaysCollection AllHolidays = new clsHolidaysCollection();
+            //create some test data to assign to the property
+            //in this case the data needs to be a list of objects
+            List<clsHolidays> TestList = new List<clsHolidays>();
+            //add an item to the list
+            //create the item of test data
+            clsHolidays TestItem = new clsHolidays();
+            //set its properties
+            TestItem.EmpID = 1;
+            TestItem.EmpName = "Oxe";
+            TestItem.EmpDepart = "Health";
+            TestItem.Reason = "Health issues";
+            TestItem.StartDate = DateTime.Now.Date;
+            //TestItem.enDate = DateTime.Now.Date;
+            ///add the item to the test list
+            TestList.Add(TestItem);
+            //assign the data to the property
+            AllHolidays.HolidaysList = TestList;
+            //test to see that te two values are the same
+            Assert.AreEqual(AllHolidays.Count, TestList.Count);
+        }
 
         //[TestMethod]
         //public void TwoRecordsPresent()
