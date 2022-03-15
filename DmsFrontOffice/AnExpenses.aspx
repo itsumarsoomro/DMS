@@ -91,8 +91,8 @@
         }
         .auto-style15 {
             position: absolute;
-            top: 52px;
-            left: 306px;
+            top: 53px;
+            left: 305px;
             z-index: 1;
             width: 84px;
         }
@@ -108,7 +108,7 @@
         <asp:TextBox ID="txtName" runat="server" CssClass="auto-style4"></asp:TextBox>
         <asp:TextBox ID="txtExpenses" runat="server" CssClass="auto-style6"></asp:TextBox>
         <asp:Button ID="btnOk" runat="server" CssClass="auto-style8" OnClick="btnOk_Click" Text="Ok" />
-        <asp:Button ID="btnCancel" runat="server" CssClass="auto-style9" Text="Cancel" />
+        <asp:Button ID="btnCancel" runat="server" CssClass="auto-style9" Text="Cancel" OnClick="btnCancel_Click" />
         <asp:Label ID="lblError" runat="server" CssClass="auto-style10"></asp:Label>
         <asp:CheckBox ID="chkActive" runat="server" CssClass="auto-style11" Text="Active" />
         <asp:Button ID="btnFind" runat="server" Text="Find" CssClass="auto-style14" OnClick="btnFind_Click" />

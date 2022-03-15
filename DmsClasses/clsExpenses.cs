@@ -121,5 +121,49 @@ namespace DmsClasses
                 return false;
             }
         }
+
+        public string Valid(string name, string category, string expenses)
+        {
+            //create a string variable to store the error
+            String Error = "";
+            //if the Name is blank
+            if (name.Length == 0)
+            {
+                //record the error
+                Error = Error + "The name may not be blank : ";
+            }
+            //if the name is greater than 50 characters
+            if (name.Length  > 50)
+            {
+                //record the error
+                Error = Error + "The name nmust be less than 50 characters : ";
+            }
+            //is the post code blank
+            if (category.Length == 0)
+            {
+                //record the error
+                Error = Error + "The category may not be blank : ";
+            }
+            //if the post code is too long
+            if (category.Length > 50)
+            {
+                //record the error
+                Error = Error + "The category must be less than 50 characters : ";
+            }
+            //is the street blank
+            if (expenses.Length == 0)
+            {
+                //record the error
+                Error = Error + "The expenses may not be blank : ";
+            }
+            //if the street is too long
+            if (expenses.Length > 50)
+            {
+                //record the error
+                Error = Error + "The expenses must be less than 50 characters : ";
+            }
+            //return any error messages
+            return Error;
+        }
     }
 }

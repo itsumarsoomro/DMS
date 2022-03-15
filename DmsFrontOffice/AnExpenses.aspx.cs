@@ -18,11 +18,33 @@ public partial class AnExpenses : System.Web.UI.Page
         //create a new instance of clsExpenses
         clsExpenses AnExpenses = new clsExpenses();
         //capture the name
-        AnExpenses.Name = txtName.Text;
-        //store the expenses in the session object
-        Session["AnExpenses"] = AnExpenses;
-        //redirect to the viewer page
-        Response.Redirect("ExpensesViewer.aspx");
+        string Name = txtName.Text;
+        //capture the category
+        string Category = txtCategory.Text;
+        //capture the expenses
+        string Expenses = txtExpenses.Text;
+        //variable to store any error messages
+        string Error="";
+        //validate the data
+        Error = AnExpenses.Valid(Name, Category, Expenses);
+        if (Error == "")
+        {
+            //capture the name
+            AnExpenses.Name = Name;
+            //capture the category
+            AnExpenses.Category = Category;
+            //capture the expenses
+            AnExpenses.Expenses = Convert.ToInt32(Expenses);
+            //store the expenses in the session object
+            Session["AnExpenses"] = AnExpenses;
+            //redirect to viewer page
+            Response.Redirect("ExpensesViewer.aspx");
+        }
+        else
+        {
+            //display the error message
+            lblError.Text = Error;
+        }
     }
 
     protected void btnFind_Click(object sender, EventArgs e)
@@ -45,13 +67,10 @@ public partial class AnExpenses : System.Web.UI.Page
             txtCategory.Text = AnExpenses.Category;
             txtExpenses.Text = AnExpenses.Expenses.ToString();
         }
-        else
-        {
-            //display error message
-            txtName.Text = "";
-            txtCategory.Text = "";
-            txtExpenses.Text = "";
-            lblError.Text = "Invalid record";
-        }
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        
     }
 }
