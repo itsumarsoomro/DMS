@@ -54,6 +54,7 @@
     <Compile Include="tstHolidays.cs" />
     <Compile Include="tstHolidaysCollection.cs" />
     <Compile Include="tstTask.cs" />
+    <Compile Include="tstExpensesCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

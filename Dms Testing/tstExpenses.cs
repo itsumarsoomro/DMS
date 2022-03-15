@@ -7,6 +7,13 @@ namespace Dms_Testing
     [TestClass]
     public class tstExpenses
     {
+
+        //good test data
+        //create some test data to pass to the mthod
+        string Expenses = "3000";
+        string Category = "Salary";
+        string Name = "Sarah";
+
         [TestMethod]
         public void TestMethod1()
         {
@@ -113,6 +120,351 @@ namespace Dms_Testing
             }
             //test to see that the result is correct
             Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void ValidMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = ""; //this should trigger an error
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        public void NameMin()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "a"; //this should be ok
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "aa"; //this should be ok
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should be ok
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+        [TestMethod]
+        public void NameMax()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should be ok
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMid()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "aaaaaaaaaaaaaaaaaaaaaaaaa"; //this should be ok
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"; //this should fail
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void NameExtremeMax()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //create some test data to pass to the method
+            string Name = "";
+            Name = Name.PadRight(500, 'a'); //this should fail
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string Category = "";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMin()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Category = "a";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Category = "aa";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Category = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMax()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Category = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string Category = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void CategoryMid()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Category = "aaaaaaaaaaaaaaaaaaaaaaaaa";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMinLessOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should fail
+            string Expenses = "";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMin()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Expenses = "a";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMinPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Expenses = "aa";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMaxLessOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Expenses = "";
+            Expenses = Expenses.PadRight(49, 'a');
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMax()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Expenses = "";
+            Expenses = Expenses.PadRight(50, 'a');
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMaxPlusOne()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = ""; ;
+            //this should fail
+            string Expenses = "";
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void ExpensesMid()
+        {
+            //create an instance of the class we want to create
+            clsExpenses AnExpenses = new clsExpenses();
+            //string variable to store any error message
+            String Error = "";
+            //this should pass
+            string Expenses = "";
+            Expenses = Expenses.PadRight(25, 'a');
+            //invoke the method
+            Error = AnExpenses.Valid(Name, Category, Expenses);
+            //test to see that the result is correct
+            Assert.AreEqual(Error, "");
         }
     }
 
