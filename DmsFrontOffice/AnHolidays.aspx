@@ -55,6 +55,7 @@
         <asp:Label ID="lblError" runat="server" CssClass="auto-style10"></asp:Label>
             <br />
             <br />
+            <br />
             <asp:Button ID="btnOk" runat="server" Text="Ok" Width="94px" OnClick="btnOk_Click" />
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="96px" />

@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Button ID="btnHoliday" runat="server" Height="37px" Text="Holidays" Width="148px" />
         </div>
     </form>
 </body>
