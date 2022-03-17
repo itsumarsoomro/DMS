@@ -34,7 +34,7 @@ namespace Dms_Testing
             TestItem.EmpDepart = "Health";
             TestItem.Reason = "Health issues";
             TestItem.StartDate = DateTime.Now.Date;
-            //      TestItem.enDate = DateTime.Now.Date;
+            TestItem.EndDate = DateTime.Now.Date;
             ///add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
@@ -70,6 +70,7 @@ namespace Dms_Testing
             TestHolidays.EmpDepart = "Health";
             TestHolidays.Reason = "Health issues";
             TestHolidays.StartDate = DateTime.Now.Date;
+            TestHolidays.EndDate = DateTime.Now.Date;
             //assign the data to the property
             AllHolidays.ThisHoliday = TestHolidays;
             //test to see that the two valuees are the same
@@ -93,7 +94,7 @@ namespace Dms_Testing
             TestItem.EmpDepart = "Health";
             TestItem.Reason = "Health issues";
             TestItem.StartDate = DateTime.Now.Date;
-            //TestItem.enDate = DateTime.Now.Date;
+            TestItem.EndDate = DateTime.Now.Date;
             ///add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
@@ -111,5 +112,32 @@ namespace Dms_Testing
         //    Assert.AreEqual(AllHolidays.Count, 2);
         //}
 
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create ab instance of the class we want to create
+            clsHolidaysCollection AllHolidays = new clsHolidaysCollection();
+            //create the item of test data
+            clsHolidays TestItem = new clsHolidays();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+       
+            TestItem.EmpName = "23";
+            TestItem.EmpDepart = "test";
+            TestItem.Reason = "test";
+            TestItem.StartDate = DateTime.Now.Date;
+            TestItem.EndDate = Convert.ToDateTime("03/20/2022");
+            //set this addres to the test data
+            AllHolidays.ThisHolidays = TestItem;
+            //add the record
+            PrimaryKey = AllHolidays.Add();
+            //set the primary key of the test data
+            TestItem.EmpID = PrimaryKey;
+            //Find the record
+            AllHolidays.ThisHolidays.Find(PrimaryKey);
+            //test to see that the two values are the same
+            Assert.AreEqual(AllHolidays.ThisHolidays, TestItem);
+        }
     }
 }

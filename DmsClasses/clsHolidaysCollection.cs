@@ -28,6 +28,7 @@ namespace DmsClasses
 
         //private data mmember for the list
         List<clsHolidays> mHolidayList = new List<clsHolidays>();
+        private clsHolidays mThisHoliday;
 
         //public property for the holiday list
         public List<clsHolidays> HolidaysList
@@ -56,7 +57,7 @@ namespace DmsClasses
                 //we shall worry about it later
             }
         }
-        public clsHolidays ThisHoliday { get; set; }
+
 
         public clsHolidaysCollection()
         {
@@ -67,6 +68,9 @@ namespace DmsClasses
             //populate the array list with data table
             PopulateArray(DB);
         }
+
+        //public property for this holiday
+        public clsHolidays ThisHoliday { get; set; }
 
         void PopulateArray(clsDataConnection DB)
         {
@@ -90,10 +94,51 @@ namespace DmsClasses
                 AllHoliday.EmpDepart = Convert.ToString(DB.DataTable.Rows[0]["Department"]);
                 AllHoliday.Reason = Convert.ToString(DB.DataTable.Rows[0]["Reason"]);
                 AllHoliday.StartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayStartDate"]);
+                AllHoliday.EndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayEndDate"]);
                 //add the record to the private data memberv
                 mHolidayList.Add(AllHoliday);
                 //point at the record
                 Index++;
+            }
+        }
+
+        public int Add()
+        {
+            //adds a new record to the database based on the values of mHolidays
+            //set theprimary key value of the new record
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+       
+            DB.AddParameter("@EmpName", mThisHoliday.EmpName);
+            DB.AddParameter("@EmpDepart", mThisHoliday.EmpDepart);
+            DB.AddParameter("@Reason", mThisHoliday.Reason);
+            DB.AddParameter("@HolidayStartDate", mThisHoliday.StartDate);
+            DB.AddParameter("@HolidayEndDate", mThisHoliday.EndDate);
+            //return the primary key of the new record
+            return DB.Execute("sproc_tblHolidays_Insert");
+        }
+
+        public class clsHolidayCollection
+        {
+            //private data member for the list
+            List<clsHolidays> mHolidayList = new List<clsHolidays>();
+            //private data member this Address
+            clsHolidays mThisHoliday = new clsHolidays();
+        }
+
+    
+
+        public clsHolidays ThisHolidays
+        {
+            get
+            {
+                //return the private data
+                return mThisHoliday;
+            }
+            set
+            {
+                //set the private data
+                mThisHoliday = value;
             }
         }
     }
