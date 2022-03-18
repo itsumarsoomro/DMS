@@ -77,50 +77,50 @@ namespace Dms_Testing
             Assert.IsTrue(Found);
         }
 
-        [TestMethod]
-        public void TestExpensesNoFound()
-        {
-            //create an instance of the class we want to create
-            clsExpenses AnExpenses = new clsExpenses();
-            //boolean variable to store the result of the search
-            Boolean Found = false;
-            //boolean variable to record if data is OK (assume it is)
-            Boolean Ok = true;
-            //create some test data to use with the method
-            Int32 ExpensesNo = 21;
-            //invoke the method
-            Found = AnExpenses.Find(ExpensesNo);
-            //check the expense no
-            if (AnExpenses.ExpensesNo != 21)
-            {
-                Ok = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(Ok);
+        //[TestMethod]
+        //public void TestExpensesNoFound()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsExpenses AnExpenses = new clsExpenses();
+        //    //boolean variable to store the result of the search
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is OK (assume it is)
+        //    Boolean Ok = true;
+        //    //create some test data to use with the method
+        //    Int32 ExpensesNo = 21;
+        //    //invoke the method
+        //    Found = AnExpenses.Find(ExpensesNo);
+        //    //check the expense no
+        //    if (AnExpenses.ExpensesNo != 21)
+        //    {
+        //        Ok = false;
+        //    }
+        //    //test to see that the result is correct
+        //    Assert.IsTrue(Ok);
 
-        }
+        //}
 
-        [TestMethod]
-        public void TestActiveFound()
-        {
-            //create an instance of the class we want to create
-            clsExpenses AnExpenses = new clsExpenses();
-            //boolean variable to store the result of the search
-            Boolean Found = false;
-            //boolean variable to record if data is OK (assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method
-            Int32 ExpensesNo = 21;
-            //invoke the method
-            Found = AnExpenses.Find(ExpensesNo);
-            //check the property
-            if (AnExpenses.Active != true)
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
+        //[TestMethod]
+        //public void TestActiveFound()
+        //{
+        //    //create an instance of the class we want to create
+        //    clsExpenses AnExpenses = new clsExpenses();
+        //    //boolean variable to store the result of the search
+        //    Boolean Found = false;
+        //    //boolean variable to record if data is OK (assume it is)
+        //    Boolean OK = true;
+        //    //create some test data to use with the method
+        //    Int32 ExpensesNo = 21;
+        //    //invoke the method
+        //    Found = AnExpenses.Find(ExpensesNo);
+        //    //check the property
+        //    if (AnExpenses.Active != true)
+        //    {
+        //        OK = false;
+        //    }
+        //    //test to see that the result is correct
+        //    Assert.IsTrue(OK);
+        //}
 
         [TestMethod]
         public void ValidMethodOK()

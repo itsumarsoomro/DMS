@@ -85,5 +85,155 @@ namespace Dms_Testing
             //test to see that the two values are the same
             Assert.AreEqual(AllExpenses.Count, TestList.Count);
         }
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsExpensesCollection AllExpenses = new clsExpensesCollection();
+            //create the item of test data
+            clsExpenses TestItem = new clsExpenses();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.ExpensesNo = 1;
+            TestItem.Name = "Terry";
+            TestItem.Category = "Rent";
+            TestItem.Expenses = 1500;
+            //set ThisExpenses to the test data
+            AllExpenses.ThisExpenses = TestItem;
+            //Add the record
+            PrimaryKey = AllExpenses.Add();
+            //set the primary key of the test data
+            TestItem.ExpensesNo = PrimaryKey;
+            //find the record
+            AllExpenses.ThisExpenses.Find(PrimaryKey);
+            //test to see that the two values are the same
+            Assert.AreEqual(AllExpenses.ThisExpenses, TestItem);
+        }
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsExpensesCollection AllExpenses = new clsExpensesCollection();
+            //create the item of test data
+            clsExpenses TestItem = new clsExpenses();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.ExpensesNo = 1;
+            TestItem.Name = "Terry";
+            TestItem.Category = "Rent";
+            TestItem.Expenses = 1500;
+            //set ThisExpenses to the test data
+            AllExpenses.ThisExpenses = TestItem;
+            //Add the record
+            PrimaryKey = AllExpenses.Add();
+            //set the primary key of the test data
+            TestItem.ExpensesNo = PrimaryKey;
+            //find the record
+            AllExpenses.ThisExpenses.Find(PrimaryKey);
+            //delete the record
+            AllExpenses.Delete();
+            //now find the record
+            Boolean Found = AllExpenses.ThisExpenses.Find(PrimaryKey);
+            //test to see that the record was not found
+            Assert.IsFalse(Found);
+        }
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsExpensesCollection AllExpenses = new clsExpensesCollection();
+            //create the item of test data
+            clsExpenses TestItem = new clsExpenses();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.ExpensesNo = 1;
+            TestItem.Name = "Terry";
+            TestItem.Category = "Rent";
+            TestItem.Expenses = 1500;
+            //set ThisExpenses to the test data
+            AllExpenses.ThisExpenses = TestItem;
+            //Add the record
+            PrimaryKey = AllExpenses.Add();
+            //set the primary key of the test data
+            TestItem.ExpensesNo = PrimaryKey;
+            //modify the test data
+            TestItem.Active = false;
+            TestItem.ExpensesNo = 3;
+            TestItem.Name = "Jom";
+            TestItem.Category = "Inventory";
+            TestItem.Expenses = 500;
+            //set the record based on the new test data
+            AllExpenses.ThisExpenses = TestItem;
+            //update the record
+            AllExpenses.Update();
+            //find the record
+            AllExpenses.ThisExpenses.Find(PrimaryKey);
+            //test to see ThisExpenses matches the test data
+            Assert.AreEqual(AllExpenses.ThisExpenses, TestItem);
+        }
+
+        [TestMethod]
+        public void ReportByCategoryMethodOK()
+        {
+            //create an instance of the class containing unfiltered results
+            clsExpensesCollection AllExpenses = new clsExpensesCollection();
+            //create an instance of the filtered data
+            clsExpensesCollection FilteredExpenses = new clsExpensesCollection();
+            //apply a blank string (should return all records);
+            FilteredExpenses.ReportByCategory("");
+            //test to see that the two values are the same
+            Assert.AreEqual(AllExpenses.Count, FilteredExpenses.Count);
+        }
+
+        //[TestMethod]
+        //public void ReportByCategoryNoneFound()
+        //{
+        //    //create an instance of the filtered data
+        //    clsExpensesCollection FilteredExpenses = new clsExpensesCollection();
+        //    //apply a category that dosen't exist
+        //    FilteredExpenses.ReportByCategory("xxxxxx");
+        //    //test to see that there are no records
+        //    Assert.AreEqual(0, FilteredExpenses.Count);
+        //}
+
+        //[TestMethod]
+        //public void ReportByCategoryTestDataFound()
+        //{
+        //    //create an instance of the filtered data
+        //    clsExpensesCollection FilteredExpenses = new clsExpensesCollection();
+        //    //var to store outcome
+        //    Boolean OK = true;
+        //    //apply a category that dosen't exsist
+        //    FilteredExpenses.ReportByCategory("xxxxxx");
+        //    //check that the correct number of records are found
+        //    if (FilteredExpenses.Count == 2)
+        //    {
+        //        //check that the first record is ID 108
+        //        if (FilteredExpenses.ExpensesList[0].ExpensesNo != 108)
+        //        {
+        //            OK = false;
+        //        }
+        //        //check that the first record is ID 109
+        //        if (FilteredExpenses.ExpensesList[1].ExpensesNo != 109)
+        //        {
+        //            OK = false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        OK = false;
+        //    }
+        //    //test to see that there are no records
+        //    Assert.IsTrue(OK);
+        //}
     }
 }
