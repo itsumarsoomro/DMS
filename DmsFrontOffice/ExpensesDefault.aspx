@@ -68,6 +68,28 @@
             z-index: 1;
             width: 60px;
         }
+        .auto-style12 {
+            position: absolute;
+            top: 475px;
+            left: 11px;
+            z-index: 1;
+        }
+        .auto-style13 {
+            position: absolute;
+            top: 43px;
+            left: 11px;
+            z-index: 1;
+            width: 106px;
+            height: 31px;
+        }
+        .auto-style14 {
+            position: absolute;
+            top: 376px;
+            left: 297px;
+            z-index: 1;
+            width: 141px;
+            height: 68px;
+        }
     </style>
 </head>
 <body>
@@ -79,11 +101,14 @@
         <asp:TextBox ID="txtCategory" runat="server" CssClass="auto-style3"></asp:TextBox>
         <p>
             &nbsp;</p>
-        <asp:Button ID="btnApply" runat="server" CssClass="auto-style7" Text="Apply" />
+        <asp:Button ID="btnApply" runat="server" CssClass="auto-style7" Text="Apply" OnClick="btnApply_Click" />
         <asp:Button ID="btnDisplayAll" runat="server" CssClass="auto-style8" Text="Display All" />
-        <asp:Button ID="btnAdd" runat="server" CssClass="auto-style9" Text="Add" />
-        <asp:Button ID="btnEdit" runat="server" CssClass="auto-style10" Text="Edit" />
-        <asp:Button ID="btnDelete" runat="server" CssClass="auto-style11" Text="Delete" />
+        <asp:Button ID="btnAdd" runat="server" CssClass="auto-style9" Text="Add" OnClick="btnAdd_Click" />
+        <asp:Button ID="btnEdit" runat="server" CssClass="auto-style10" Text="Edit" OnClick="btnEdit_Click" />
+        <asp:Button ID="btnDelete" runat="server" CssClass="auto-style11" Text="Delete" OnClick="btnDelete_Click" />
+        <asp:Label ID="lblError" runat="server" CssClass="auto-style12"></asp:Label>
+        <asp:Label ID="lblExpenses" runat="server" CssClass="auto-style13" Font-Bold="True" Font-Size="Larger" Text="Expenses"></asp:Label>
+        <asp:Button ID="btnMainMenu" runat="server" CssClass="auto-style14" OnClick="btnMainMenu_Click" Text="Main Menu" />
     </form>
 </body>
 </html>

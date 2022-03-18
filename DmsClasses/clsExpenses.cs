@@ -122,6 +122,11 @@ namespace DmsClasses
             }
         }
 
+        public bool Find(object catgeory)
+        {
+            throw new NotImplementedException();
+        }
+
         public string Valid(string name, string category, string expenses)
         {
             //create a string variable to store the error

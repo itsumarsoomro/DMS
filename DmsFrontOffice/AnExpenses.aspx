@@ -96,6 +96,14 @@
             z-index: 1;
             width: 84px;
         }
+        .auto-style16 {
+            position: absolute;
+            top: 224px;
+            left: 189px;
+            z-index: 1;
+            height: 28px;
+            width: 62px;
+        }
     </style>
 </head>
 <body>
@@ -115,6 +123,7 @@
         <asp:TextBox ID="txtCategory" runat="server" CssClass="auto-style12"></asp:TextBox>
         <asp:TextBox ID="txtExpensesNo" runat="server" CssClass="auto-style13"></asp:TextBox>
         <asp:Label ID="lblExpensesNo" runat="server" CssClass="auto-style15" Text="ExpensesNo"></asp:Label>
+        <asp:Button ID="btnView" runat="server" CssClass="auto-style16" OnClick="btnView_Click" Text="View" />
     </form>
 </body>
 </html>
