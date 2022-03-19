@@ -13,7 +13,7 @@
             z-index: 1;
             width: 256px;
             height: 200px;
-            bottom: 390px;
+            bottom: 385px;
         }
         .auto-style2 {
             position: absolute;

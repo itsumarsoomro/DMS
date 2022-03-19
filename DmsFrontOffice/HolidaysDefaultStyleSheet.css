@@ -1,0 +1,31 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    background-color: #f1f2f4;
+    font-family: 'Arial';
+}
+
+.head {
+    height: 100px;
+    width: 100%;
+    background-color: #3C424F;
+}
+
+.mb {
+    padding: 40px 500px;
+}
+
+.body {
+    width: 500px;
+    height: 400px;
+    background-color: silver;
+    border-radius: 15px;
+}
+
+.foot {
+    width: 100%;
+    height: 200px;
+    background-color: #3C424F;
+    padding-left: 150px;
+    padding-right: 150px;
+}
