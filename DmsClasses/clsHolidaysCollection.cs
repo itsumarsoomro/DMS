@@ -5,31 +5,13 @@ namespace DmsClasses
 {
     public class clsHolidaysCollection
     {
-        ////create the items of test data
-        //clsHolidays TestItem = new clsHolidays();
-        ////set its properties
-        //TestItem.EmpID = 1;
-        //    TestItem.EmpName = "Oxe";
-        //    TestItem.EmpDepart = "Health";
-        //    TestItem.Reason = "Health issues";
-        //    TestItem.StartDate = DateTime.Now.Date;
-        //    // add item to test list
-        //    mHolidayList.Add(TestItem);
-        //    //re initialise the object for some new data
-        //    TestItem = new clsHoliday();
-        ////set its properties
-        //TestItem.EmpID = 2;
-        //    TestItem.EmpName = "Oxerr";
-        //    TestItem.EmpDepart = "Healthr";
-        //    TestItem.Reason = "Health issuesr";
-        //    TestItem.StartDate = DateTime.Now.Date;
-        //    //add the item to the test list
-        //    mHolidayList.Add(TestItem);
-
+       
         //private data mmember for the list
         List<clsHolidays> mHolidayList = new List<clsHolidays>();
-        private clsHolidays mThisHoliday;
 
+        //private data member thisBook
+        clsHolidays mThisHoliday = new clsHolidays();
+ 
         //public property for the holiday list
         public List<clsHolidays> HolidaysList
         {
@@ -43,7 +25,19 @@ namespace DmsClasses
                 mHolidayList = value;
             }
         }
-
+        public clsHolidays ThisHolidays
+        {
+            get
+            {
+                //return the private data
+                return mThisHoliday;
+            }
+            set
+            {
+                //set the private data
+                mThisHoliday = value;
+            }
+        }
         //public property for count
         public int Count
         {
@@ -69,8 +63,7 @@ namespace DmsClasses
             PopulateArray(DB);
         }
 
-        //public property for this holiday
-        public clsHolidays ThisHoliday { get; set; }
+
 
         void PopulateArray(clsDataConnection DB)
         {
@@ -90,11 +83,11 @@ namespace DmsClasses
                 clsHolidays AllHoliday = new clsHolidays();
                 //read in the fields from the current records
                 AllHoliday.EmpID = Convert.ToInt32(DB.DataTable.Rows[Index]["EmpID"]);
-                AllHoliday.EmpName = Convert.ToString(DB.DataTable.Rows[0]["EmpName"]);
-                AllHoliday.EmpDepart = Convert.ToString(DB.DataTable.Rows[0]["Department"]);
-                AllHoliday.Reason = Convert.ToString(DB.DataTable.Rows[0]["Reason"]);
-                AllHoliday.StartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayStartDate"]);
-                AllHoliday.EndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayEndDate"]);
+                AllHoliday.EmpName = Convert.ToString(DB.DataTable.Rows[Index]["EmpName"]);
+                AllHoliday.EmpDepart = Convert.ToString(DB.DataTable.Rows[Index]["Department"]);
+                AllHoliday.Reason = Convert.ToString(DB.DataTable.Rows[Index]["Reason"]);
+                AllHoliday.StartDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["HolidayStartDate"]);
+                AllHoliday.EndDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["HolidayEndDate"]);
                 //add the record to the private data memberv
                 mHolidayList.Add(AllHoliday);
                 //point at the record
@@ -107,8 +100,7 @@ namespace DmsClasses
             //adds a new record to the database based on the values of mHolidays
             //set theprimary key value of the new record
             clsDataConnection DB = new clsDataConnection();
-            //set the parameters for the stored procedure
-       
+            //set the parameters for the stored procedure            
             DB.AddParameter("@EmpName", mThisHoliday.EmpName);
             DB.AddParameter("@EmpDepart", mThisHoliday.EmpDepart);
             DB.AddParameter("@Reason", mThisHoliday.Reason);
@@ -118,28 +110,33 @@ namespace DmsClasses
             return DB.Execute("sproc_tblHolidays_Insert");
         }
 
-        public class clsHolidayCollection
-        {
-            //private data member for the list
-            List<clsHolidays> mHolidayList = new List<clsHolidays>();
-            //private data member this Address
-            clsHolidays mThisHoliday = new clsHolidays();
-        }
-
     
-
-        public clsHolidays ThisHolidays
+        public void Delete()
         {
-            get
-            {
-                //return the private data
-                return mThisHoliday;
-            }
-            set
-            {
-                //set the private data
-                mThisHoliday = value;
-            }
+            //deletes the record pointed to by thisAddress
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@EmpID", mThisHoliday.EmpID);
+            //execute the stored procedure
+            DB.Execute("sproc_tblHolidays_Delete");       
         }
+
+        public void Update()
+        {
+            //update an exisitng record based on the values of thisHolidays
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@EmpID", mThisHoliday.EmpID);
+            DB.AddParameter("@EmpName", mThisHoliday.EmpName);
+            DB.AddParameter("@EmpDepart", mThisHoliday.EmpDepart);
+            DB.AddParameter("@Reason", mThisHoliday.Reason);
+            DB.AddParameter("@HolidayStartDate", mThisHoliday.StartDate);
+            DB.AddParameter("@HolidayEndDate", mThisHoliday.EndDate);
+            //execute the stored procedure
+            DB.Execute("sproc_tblHolidays_Update");
+        }
+
     }
 }

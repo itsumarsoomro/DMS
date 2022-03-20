@@ -72,9 +72,9 @@ namespace Dms_Testing
             TestHolidays.StartDate = DateTime.Now.Date;
             TestHolidays.EndDate = DateTime.Now.Date;
             //assign the data to the property
-            AllHolidays.ThisHoliday = TestHolidays;
+            AllHolidays.ThisHolidays = TestHolidays;
             //test to see that the two valuees are the same
-            Assert.AreEqual(AllHolidays.ThisHoliday, TestHolidays);
+            Assert.AreEqual(AllHolidays.ThisHolidays, TestHolidays);
         }
 
         [TestMethod]
@@ -122,12 +122,13 @@ namespace Dms_Testing
             //var to store the primary key
             Int32 PrimaryKey = 0;
             //set its properties
-       
+
+            TestItem.EmpID =  6;
             TestItem.EmpName = "23";
             TestItem.EmpDepart = "test";
             TestItem.Reason = "test";
-            TestItem.StartDate = DateTime.Now.Date;
-            TestItem.EndDate = Convert.ToDateTime("03/20/2022");
+            TestItem.StartDate = Convert.ToDateTime("3/19/2022");
+            TestItem.EndDate = Convert.ToDateTime("3/20/2022");
             //set this addres to the test data
             AllHolidays.ThisHolidays = TestItem;
             //add the record
@@ -139,5 +140,76 @@ namespace Dms_Testing
             //test to see that the two values are the same
             Assert.AreEqual(AllHolidays.ThisHolidays, TestItem);
         }
-    }
-}
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            //create ab instance of the class we want to create
+            clsHolidaysCollection AllHolidays = new clsHolidaysCollection();
+            //create the item of test data
+            clsHolidays TestItem = new clsHolidays();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.EmpID = 6;
+            TestItem.EmpName = "23";
+            TestItem.EmpDepart = "test";
+            TestItem.Reason = "test";
+            TestItem.StartDate = Convert.ToDateTime("3/19/2022");
+            TestItem.EndDate = Convert.ToDateTime("3/20/2022");
+            //set this addres to the test data
+            AllHolidays.ThisHolidays = TestItem;
+            //add the record
+            PrimaryKey = AllHolidays.Add();
+            //set the primary key of the test data
+            TestItem.EmpID = PrimaryKey;
+            //Find the record
+            AllHolidays.ThisHolidays.Find(PrimaryKey);
+            //delete the record
+            AllHolidays.Delete();
+            //now find the record
+            Boolean Found = AllHolidays.ThisHolidays.Find(PrimaryKey);
+            //test to see that the record was not found
+            Assert.IsFalse(Found);
+        }
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create ab instance of the class we want to create
+            clsHolidaysCollection AllHolidays = new clsHolidaysCollection();
+            //create the item of test data
+            clsHolidays TestItem = new clsHolidays();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            //TestItem.EmpID = 6;
+            TestItem.EmpName = "23";
+            TestItem.EmpDepart = "test";
+            TestItem.Reason = "test";
+            TestItem.StartDate = Convert.ToDateTime("3/19/2022");
+            TestItem.EndDate = Convert.ToDateTime("3/20/2022");
+            //set this addres to the test data
+            AllHolidays.ThisHolidays = TestItem;
+            //add the record
+            PrimaryKey = AllHolidays.Add();
+            //set the primary key of the test data
+            TestItem.EmpID = PrimaryKey;
+            //modify the test
+            TestItem.EmpName = "24";
+            TestItem.EmpDepart = "tests";
+            TestItem.Reason = "tests";
+            TestItem.StartDate = Convert.ToDateTime("3/17/2022");
+            TestItem.EndDate = Convert.ToDateTime("3/19/2022");
+            //set the record based inn thew new test data
+            AllHolidays.ThisHolidays = TestItem;
+            //update the record
+            AllHolidays.Update();
+            //find the record
+            AllHolidays.ThisHolidays.Find(PrimaryKey);
+            //test to see this holiday mateches the test data
+            Assert.AreEqual(AllHolidays.ThisHolidays, TestItem);
+        }        
+        }
+        }
+
