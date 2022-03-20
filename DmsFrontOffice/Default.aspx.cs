@@ -24,6 +24,6 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnHoliday_Click(object sender, EventArgs e)
     {
-
+        Response.Redirect("HolidaysDefault.aspx");
     }
 }

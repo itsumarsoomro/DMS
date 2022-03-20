@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title></title>
+    <title>Holidays Dashboard</title>
 
      <link  rel="stylesheet" type="text/css" href="HolidaysDefaultStyleSheet.css" />
     <style type="text/css">
@@ -20,8 +20,12 @@
 <body>
 
     <form id="form1" runat="server">
-    <%-- layout of the  page --%>
+        <%-- layout of the  page --%>
     <div class="head">
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="Label1" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS"></asp:Label>
     </div>
    
      <br /> <br /> <br />
@@ -33,7 +37,7 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:ListBox ID="ListBoxHolidays" runat="server" Height="185px" Width="310px"></asp:ListBox>
+        <asp:ListBox ID="lstHolidays" runat="server" Height="185px" Width="310px"></asp:ListBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblError" runat="server" BackColor="Silver" Text="[lblError]"></asp:Label>
@@ -56,9 +60,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnAdd" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" OnClick="btnAdd_Click" Text="Add +" Width="67px" />
 &nbsp;&nbsp;
-        <asp:Button ID="btnEdit" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Edit" Width="67px" />
+        <asp:Button ID="btnEdit" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Edit" Width="67px" OnClick="btnEdit_Click" />
 &nbsp;&nbsp;
-        <asp:Button ID="btnDelete" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Delete x" Width="67px" />
+        <asp:Button ID="btnDelete" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Delete x" Width="67px" OnClick="btnDelete_Click" />
 
     </div>
     </div>
