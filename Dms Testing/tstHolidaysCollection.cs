@@ -140,7 +140,6 @@ namespace Dms_Testing
             //test to see that the two values are the same
             Assert.AreEqual(AllHolidays.ThisHolidays, TestItem);
         }
-
         [TestMethod]
         public void DeleteMethodOK()
         {
@@ -172,7 +171,6 @@ namespace Dms_Testing
             //test to see that the record was not found
             Assert.IsFalse(Found);
         }
-
         [TestMethod]
         public void UpdateMethodOK()
         {
@@ -210,6 +208,28 @@ namespace Dms_Testing
             //test to see this holiday mateches the test data
             Assert.AreEqual(AllHolidays.ThisHolidays, TestItem);
         }        
+        [TestMethod]
+        public void ReportByReasonOK()
+        {
+            //create ab instance of the class we want to create
+            clsHolidaysCollection AllHolidays = new clsHolidaysCollection();
+            //create an instance of the filtered data
+            clsHolidaysCollection FilteredHolidays = new clsHolidaysCollection();
+            //apply a blank string (should return all the records)
+            FilteredHolidays.ReportByReason("");
+            //test to see that the two values are same
+            Assert.AreEqual(AllHolidays.Count, FilteredHolidays.Count);
         }
+        [TestMethod]
+        public void ReportByReasonNoneFound()
+        {
+            //create an instance of the filtered data
+            clsHolidaysCollection FilteredHolidays = new clsHolidaysCollection();
+            //apply a blank string (should return all the records)
+            FilteredHolidays.ReportByReason("NotExisted");
+            //test to see that the two values are same
+            Assert.AreEqual(0, FilteredHolidays.Count);
+        }
+    }
         }
 

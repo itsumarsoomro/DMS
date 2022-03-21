@@ -151,4 +151,9 @@ public partial class AnHolidays : System.Web.UI.Page
             lblError.Text = "This Employee ID does not exist please try again later.";
         }
     }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("HolidaysDefault.aspx");
+    }
 }

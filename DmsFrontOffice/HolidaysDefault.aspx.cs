@@ -13,14 +13,27 @@ public partial class HolidaysDefault : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        ////get the ID of the Employee to be processed
+        //get the ID of the Employee to be processed
         //EmpID = Convert.ToInt32(Session["EmpID"]);
-        //if (IsPostBack == false)
-        //{
-        //    //populate  the list of holidays
-        //    DisplayHolidays();
-          
-        //}
+        if (IsPostBack == false)
+        {
+            //populate  the list of holidays
+            DisplayHolidays();
+        }
+    }
+
+    private void DisplayHolidays()
+    {
+        //create an instance of the holiday collection
+        DmsClasses.clsHolidaysCollection HolidaysBook = new DmsClasses.clsHolidaysCollection();
+        //set the data source of the list of the holidays in the collection
+        lstHolidays.DataSource = HolidaysBook.HolidaysList;
+        //set the name of the primary key
+        lstHolidays.DataValueField = "EmpID";
+        //set the data field to display
+        lstHolidays.DataTextField = "EmpName";        
+        //bind the data to the list
+        lstHolidays.DataBind();
     }
 
 
@@ -74,7 +87,12 @@ public partial class HolidaysDefault : System.Web.UI.Page
         else //if no record has been selected
         {
             //display an error
-            lblError.Text = "Please select a holiday record to delete from the list";
+            lblError.Text = "Please select a holiday record to Edit from the list";
         }
+    }
+
+    protected void btnHome_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default.aspx");
     }
 }
