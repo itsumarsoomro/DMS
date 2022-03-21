@@ -22,6 +22,15 @@
             left: 193px;
             z-index: 1;
         }
+        .auto-style3 {
+        position: absolute;
+        top: 825px;
+        left: 704px;
+        z-index: 1;
+        width: 74px;
+        height: 39px;
+        border-radius: 16px;
+        }
         .auto-style10 {
             position: absolute;
             top: 251px;
@@ -134,7 +143,7 @@
             margin-top: 0px;
             position: absolute;
             top: 119px;
-            left: 26px;
+            left: 25px;
             z-index: 1;
         }
         .auto-style21 {
@@ -169,6 +178,15 @@
             right: 134px;
             height: 25px;
         }
+        .auto-style25 {
+            position: absolute;
+            top: 863px;
+            left: 655px;
+            z-index: 1;
+            width: 172px;
+            height: 24px;
+            border-radius: 16px;
+        }
         </style>
         </head>
         <body>
@@ -197,6 +215,11 @@
             <br />
             <br/>
         <div class="foot">
+
+        <asp:Label ID="Label2" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS" CssClass="auto-style3"></asp:Label>
+
+            <br />
+            <asp:Label ID="Label3" runat="server" BackColor="#3C424F" BorderColor="#3C424F" CssClass="auto-style25" Font-Bold="True" ForeColor="White" Text="Copyright © 2022 DMS"></asp:Label>
 
         </div>
 

@@ -34,16 +34,17 @@ public partial class AnHolidays : System.Web.UI.Page
         //create an instance of the holidays
         DmsClasses.clsHolidaysCollection HolidayBook = new DmsClasses.clsHolidaysCollection();
         //validate the data on the web form
-        String Error = HolidayBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, txtStartdate.Text, txtEndate.Text );
+        String Error = HolidayBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, txtStartdate.Text, txtEndate.Text);
         //if the data is Ok then add it to the object
         if (Error == "")
         {
+            
             //get the data entered by the user
             HolidayBook.ThisHolidays.EmpName = txtName.Text;
             HolidayBook.ThisHolidays.EmpDepart = txtDepartment.Text;
             HolidayBook.ThisHolidays.Reason = txtReason.Text;
-            HolidayBook.ThisHolidays.StartDate = Convert.ToDateTime(txtStartdate);
-            HolidayBook.ThisHolidays.EndDate = Convert.ToDateTime(txtEndate);
+            HolidayBook.ThisHolidays.StartDate = Convert.ToDateTime(txtStartdate.Text);
+            HolidayBook.ThisHolidays.EndDate = Convert.ToDateTime(txtEndate.Text);
             //add the record
             HolidayBook.Add();
             //all done so redirect back to the main page

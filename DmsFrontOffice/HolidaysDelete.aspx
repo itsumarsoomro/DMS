@@ -6,6 +6,26 @@
 <head runat="server">
     <title>Delete Confirmation</title>
      <link  rel="stylesheet" type="text/css" href="HolidaysDeleteStyleSheet.css" />
+<style>
+      .auto-style3 {
+            position: absolute;
+            top: 819px;
+            left: 691px;
+            z-index: 1;
+            width: 74px;
+            height: 36px;
+            border-radius: 16px;
+        }
+    .auto-style4 {
+        position: absolute;
+        top: 860px;
+        left: 641px;
+        z-index: 1;
+        width: 172px;
+        height: 19px;
+        border-radius: 16px;
+    }
+    </style>
 </head>
 <body>
     <%-- Layout of the page --%>
@@ -52,6 +72,11 @@
     
     
 <div class="foot">
+
+        <asp:Label ID="Label2" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS " CssClass="auto-style3"></asp:Label>
+
+    <br />
+            <asp:Label ID="Label3" runat="server" BackColor="#3C424F" BorderColor="#3C424F" CssClass="auto-style4" Font-Bold="True" ForeColor="White" Text="Copyright © 2022 DMS"></asp:Label>
 
 </div>
 
