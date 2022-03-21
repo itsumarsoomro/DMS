@@ -95,6 +95,7 @@ namespace DmsClasses
             }
         }
 
+     
         public int Add()
         {
             //adds a new record to the database based on the values of mHolidays
@@ -138,5 +139,17 @@ namespace DmsClasses
             DB.Execute("sproc_tblHolidays_Update");
         }
 
+        public void ReportByReason(string Reason)
+        {
+            //filters the record based on a full or partial reason
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //send the reason parameter to the database
+            DB.AddParameter("@Reason", Reason);
+            //execute the stored procedure
+            DB.Execute("sproc_tblHolidays_FilterByRecords");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
     }
 }

@@ -64,10 +64,15 @@
 &nbsp;&nbsp;
         <asp:Button ID="btnDelete" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Delete x" Width="67px" OnClick="btnDelete_Click" />
 
+    &nbsp;&nbsp;
+        <asp:Button ID="btnHome" runat="server" Font-Bold="True" Height="30px" OnClick="btnHome_Click" Text="Home" Width="72px" />
+
     </div>
     </div>
     
-  <br /> <br /> <br /> <br /> <br /> <br />
+  <br /> <br /> <br /> 
+        <br />
+        <br />
 
 <div class="foot">
 
