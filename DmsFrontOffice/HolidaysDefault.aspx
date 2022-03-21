@@ -15,6 +15,24 @@
             background-color: silver;
             border-radius: 15px;
         }
+        .auto-style2{
+             position: absolute;
+            top: 827px;
+            left: 712px;
+            z-index: 1;
+            width: 74px;
+            height: 39px;
+            border-radius: 16px;
+        }
+        .auto-style3 {
+            position: absolute;
+            top: 866px;
+            left: 660px;
+            z-index: 1;
+            width: 179px;
+            height: 19px;
+            border-radius: 16px;
+        }
     </style>
 </head>
 <body>
@@ -75,6 +93,10 @@
         <br />
 
 <div class="foot">
+
+    <br />
+    <asp:Label ID="Label3" runat="server" BackColor="#3C424F" BorderColor="#3C424F" CssClass="auto-style3" Font-Bold="True" ForeColor="White" Text="Copyright © 2022 DMS"></asp:Label>
+        <asp:Label ID="Label2" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS" BorderColor="#3C424F" CssClass="auto-style2"></asp:Label>
 
 </div>
 
