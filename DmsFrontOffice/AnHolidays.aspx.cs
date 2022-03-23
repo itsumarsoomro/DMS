@@ -48,7 +48,7 @@ public partial class AnHolidays : System.Web.UI.Page
             //add the record
             HolidayBook.Add();
             //all done so redirect back to the main page
-            Response.Redirect("HolidaysDefault.aspx");
+            Response.Redirect("HolidaysDashboard.aspx");
         }
         else
         {
@@ -78,7 +78,7 @@ public partial class AnHolidays : System.Web.UI.Page
             //update the record
             HolidaysBook.Update();
             //all done so redirect back to main page
-            Response.Redirect("HolidaysDefault.aspx");
+            Response.Redirect("HolidaysDashboard.aspx");
         }
         else
         {

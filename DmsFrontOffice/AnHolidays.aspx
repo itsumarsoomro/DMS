@@ -9,22 +9,22 @@
         .auto-style1 {
             height: 357px;
             position: absolute;
-            top: 234px;
-            left: 532px;
+            top: 238px;
+            left: 515px;
             z-index: 1;
             width: 432px;
-            
+            text-align: center;
         }
         .auto-style2 {
             margin-top: 0px;
              position: absolute;
-            top: 148px;
+            top: 157px;
             left: 192px;
             z-index: 1;
         }
         .auto-style3 {
         position: absolute;
-        top: 825px;
+        top: 830px;
         left: 163px;
         z-index: 1;
         width: 74px;
@@ -33,8 +33,8 @@
         }
         .auto-style10 {
             position: absolute;
-            top: 251px;
-            left: 27px;
+            top: 265px;
+            left: 29px;
             z-index: 1;
             height: 19px;
             margin-bottom: 1px;
@@ -42,7 +42,7 @@
         .auto-style11 {
             height: 16px;
             position: absolute;
-            top: 82px;
+            top: 93px;
             left: 191px;
             z-index: 1;
         }
@@ -80,7 +80,7 @@
         .auto-style12 {
             margin-top: 0px;
             position: absolute;
-            top: 293px;
+            top: 292px;
             left: 28px;
             z-index: 1;
             height: 30px;
@@ -88,7 +88,7 @@
         .auto-style13 {
             margin-top: 0px;
             position: absolute;
-            top: 293px;
+            top: 294px;
             left: 294px;
             z-index: 1;
             height: 30px;
@@ -96,24 +96,24 @@
         .auto-style14 {
             margin-top: 0px;
             position: absolute;
-            top: 217px;
+            top: 221px;
             left: 192px;
             z-index: 1;
             width: 189px;
             height: 24px;
-            bottom: 112px;
+            bottom: 108px;
         }
         .auto-style15 {
             margin-top: 0px;
             position: absolute;
-            top: 184px;
+            top: 189px;
             left: 192px;
             z-index: 1;
         }
         .auto-style16 {
             margin-top: 0px;
             position: absolute;
-            top: 116px;
+            top: 125px;
             left: 191px;
             z-index: 1;
             width: 179px;
@@ -121,57 +121,57 @@
         .auto-style17 {
             margin-top: 0px;
             position: absolute;
-            top: 220px;
-            left: 24px;
+            top: 227px;
+            left: 26px;
             z-index: 1;
         }
         .auto-style18 {
             margin-top: 0px;
             position: absolute;
-            top: 187px;
-            left: 25px;
+            top: 195px;
+            left: 26px;
             z-index: 1;
         }
         .auto-style19 {
             margin-top: 0px;
             position: absolute;
-            top: 152px;
+            top: 162px;
             left: 26px;
             z-index: 1;
         }
         .auto-style20 {
             margin-top: 0px;
             position: absolute;
-            top: 119px;
+            top: 131px;
             left: 25px;
             z-index: 1;
         }
         .auto-style21 {
             margin-top: 0px;
             position: absolute;
-            top: 85px;
-            left: 26px;
+            top: 97px;
+            left: 25px;
             z-index: 1;
         }
         .auto-style22 {
             margin-top: 0px;
             position: absolute;
-            top: 51px;
-            left: 27px;
+            top: 63px;
+            left: 25px;
             z-index: 1;
         }
         .auto-style23 {
             margin-top: 0px;
             position: absolute;
-            top: 47px;
-            left: 301px;
+            top: 60px;
+            left: 300px;
             z-index: 1;
             height: 29px;
         }
         .auto-style24 {
             margin-top: 0px;
             position: absolute;
-            top: 47px;
+            top: 59px;
             left: 191px;
             z-index: 1;
             width: 101px;
@@ -180,12 +180,49 @@
         }
         .auto-style25 {
             position: absolute;
-            top: 864px;
+            top: 868px;
             left: 165px;
             z-index: 1;
             width: 172px;
             height: 24px;
             border-radius: 16px;
+        }
+        .auto-style26 {
+            position: absolute;
+            top: 35px;
+            left: 163px;
+            z-index: 1;
+            width: 74px;
+            height: 39px;
+            border-radius: 16px;
+        }
+        .auto-style27 {
+            margin-top: 0px;
+            position: absolute;
+            top: 4px;
+            left: 144px;
+            z-index: 1;
+        }
+        .auto-style28 {
+            height: 39px;
+            background-color: #51EC60;
+            
+        }
+        .auto-style29 {
+            width: 463px;
+            height: 400px;
+            background-color: silver;
+            border-radius: 15px;
+            margin-left: 39;
+        }
+        .auto-style30 {
+            margin-top: 0px;
+            position: absolute;
+            top: 253px;
+            left: 217px;
+            z-index: 1;
+            width: 164px;
+            height: 13px;
         }
         </style>
         </head>
@@ -198,13 +235,15 @@
                 <br />
                 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS"> </asp:Label>
+        <asp:Label ID="Label1" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS" CssClass="auto-style26"></asp:Label>
 
             </div>
             <br/> <br/> <br/> <br/>   
     
             <div class="mb">
-            <div class="body">
+            <div class="auto-style29">
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
             </div>
             </div>
@@ -224,6 +263,8 @@
         </div>
 
         <div class="auto-style1" style="background-color: silver;">
+            <asp:Label ID="Label4" runat="server" BackColor="#51EC60" BorderColor="#51EC60" CssClass="auto-style27" Font-Bold="True" Font-Size="X-Large" Text="Holiday Form" ForeColor="White"></asp:Label>
+            <hr class="auto-style28" />
             <br />
             <asp:Label ID="lblId" runat="server" Text="Employee ID" CssClass="auto-style22" BackColor="Silver"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -258,6 +299,7 @@
             <asp:Button ID="btnOk" runat="server" Text="Ok" Width="94px" OnClick="btnOk_Click" CssClass="auto-style13" />
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="96px" OnClick="btnCancel_Click" CssClass="auto-style12" />
+            <asp:Label ID="Label5" runat="server" BackColor="Silver" CssClass="auto-style30" Font-Size="Small" Text="i.e 23/03/2022 12:00:00 AM"></asp:Label>
         </div>
        
     </form>

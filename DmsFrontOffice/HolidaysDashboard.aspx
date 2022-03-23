@@ -17,8 +17,8 @@
         }
         .auto-style2{
              position: absolute;
-            top: 827px;
-            left: 712px;
+            top: 833px;
+            left: 211px;
             z-index: 1;
             width: 74px;
             height: 39px;
@@ -26,11 +26,20 @@
         }
         .auto-style3 {
             position: absolute;
-            top: 866px;
-            left: 660px;
+            top: 869px;
+            left: 210px;
             z-index: 1;
             width: 179px;
             height: 19px;
+            border-radius: 16px;
+        }
+        .auto-style4 {
+            position: absolute;
+            top: 43px;
+            left: 1261px;
+            z-index: 1;
+            width: 100px;
+            height: 29px;
             border-radius: 16px;
         }
     </style>
@@ -41,6 +50,7 @@
         <%-- layout of the  page --%>
     <div class="head">
         <br />
+        <asp:Button ID="Button1" runat="server" CssClass="auto-style4" OnClick="Button1_Click" Text="Logout" />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS"></asp:Label>
