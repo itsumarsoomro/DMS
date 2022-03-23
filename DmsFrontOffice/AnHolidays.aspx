@@ -18,14 +18,14 @@
         .auto-style2 {
             margin-top: 0px;
              position: absolute;
-            top: 147px;
-            left: 193px;
+            top: 148px;
+            left: 192px;
             z-index: 1;
         }
         .auto-style3 {
         position: absolute;
         top: 825px;
-        left: 704px;
+        left: 163px;
         z-index: 1;
         width: 74px;
         height: 39px;
@@ -42,8 +42,8 @@
         .auto-style11 {
             height: 16px;
             position: absolute;
-            top: 113px;
-            left: 193px;
+            top: 82px;
+            left: 191px;
             z-index: 1;
         }
         * 
@@ -96,25 +96,25 @@
         .auto-style14 {
             margin-top: 0px;
             position: absolute;
-            top: 214px;
+            top: 217px;
             left: 192px;
             z-index: 1;
             width: 189px;
             height: 24px;
-            bottom: 115px;
+            bottom: 112px;
         }
         .auto-style15 {
             margin-top: 0px;
             position: absolute;
-            top: 181px;
-            left: 193px;
+            top: 184px;
+            left: 192px;
             z-index: 1;
         }
         .auto-style16 {
             margin-top: 0px;
             position: absolute;
-            top: 79px;
-            left: 193px;
+            top: 116px;
+            left: 191px;
             z-index: 1;
             width: 179px;
         }
@@ -163,7 +163,7 @@
         .auto-style23 {
             margin-top: 0px;
             position: absolute;
-            top: 45px;
+            top: 47px;
             left: 301px;
             z-index: 1;
             height: 29px;
@@ -171,17 +171,17 @@
         .auto-style24 {
             margin-top: 0px;
             position: absolute;
-            top: 45px;
-            left: 193px;
+            top: 47px;
+            left: 191px;
             z-index: 1;
             width: 101px;
-            right: 134px;
+            right: 136px;
             height: 25px;
         }
         .auto-style25 {
             position: absolute;
-            top: 863px;
-            left: 655px;
+            top: 864px;
+            left: 165px;
             z-index: 1;
             width: 172px;
             height: 24px;

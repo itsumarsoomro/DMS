@@ -103,7 +103,7 @@ namespace Dms_Testing
             //bollean variable to store the results of the validation
             Boolean Found = false;
             //create some test data to use with method
-            Int32 EmpID = 1;
+            Int32 EmpID = 54;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //test to see if the result is true
@@ -120,11 +120,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 1;
+            Int32 EmpID = 60;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EmpID != 1)
+            if (AnHolidays.EmpID != 60)
             {
                 OK = false;
             }
@@ -142,11 +142,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 1;
+            Int32 EmpID = 60;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EmpName != "Umar")
+            if (AnHolidays.EmpName != "HRR")
             {
                 OK = false;
             }
@@ -164,11 +164,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 1;
+            Int32 EmpID = 60;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EmpDepart != "IT")
+            if (AnHolidays.EmpDepart != "Isssiak")
             {
                 OK = false;
             }
@@ -186,11 +186,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 1;
+            Int32 EmpID = 60;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.Reason != "Fever")
+            if (AnHolidays.Reason != "Feverr")
             {
                 OK = false;
             }
@@ -208,11 +208,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 1;
+            Int32 EmpID = 60;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.StartDate != Convert.ToDateTime("03/12/2022"))
+            if (AnHolidays.StartDate != Convert.ToDateTime("19/03/2022"))
             {
                 OK = false;
             }
@@ -230,11 +230,11 @@ namespace Dms_Testing
             //bollean variable to record if data is ok(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 EmpID = 1;
+            Int32 EmpID = 60;
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EndDate != Convert.ToDateTime("03/15/2022"))
+            if (AnHolidays.EndDate != Convert.ToDateTime("20/03/2022"))
             {
                 OK = false;
             }
@@ -328,7 +328,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empName = "0123456789012345678";
+            string empName = "ogTXuM2BUGmpwAPScu4sF1e7FuHKsxmAzMTCyd4zK28emXbvx";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -343,7 +343,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empName = "0123456789012345678";
+            string empName = "ogTXuM2BUGmpwAPScu4sF1e7FuHKsxmAzMTCyd4zK28emXbvx9";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -358,7 +358,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empName = "012345678901234567890";
+            string empName = "ogTXuM2BUGmpwAPScu4sF1e7FuHKsxmAzMTCyd4zK28emXbvx9a";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -373,7 +373,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empName = "0123456789";
+            string empName = "7akubr52YcrS1k5cldnxCOpXp";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -459,7 +459,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empDepart = "0123456789012345678";
+            string empDepart = "07YgI1Dng9fcp6trgPiwx9uZOXkuHrnM6IHI66utQ86Q9S3Gj";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -474,7 +474,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empDepart = "abcdefghjiklmnopqrst";
+            string empDepart = "07YgI1Dng9fcp6trgPiwx9uZOXkuHrnM6IHI66utQ86Q9S3Gj0";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -489,7 +489,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empDepart = "012345678901234567890";
+            string empDepart = "07YgI1Dng9fcp6trgPiwx9uZOXkuHrnM6IHI66utQ86Q9S3Gj0a";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -504,7 +504,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string empDepart = "0123456789";
+            string empDepart = "j2t8lPgtntG3vdty2J7DFqkaF";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -590,7 +590,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string reason = "0123456789012345678";
+            string reason = "b3ivgtomn9PfIK8EoJu9K0xS6akd3m5NPhVyXCgPUk5H90vKz";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -605,7 +605,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string reason = "01234567890123456789";
+            string reason = "b3ivgtomn9PfIK8EoJu9K0xS6akd3m5NPhVyXCgPUk5H90vKzt";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -620,7 +620,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string reason = "012345678901234567890";
+            string reason = "b3ivgtomn9PfIK8EoJu9K0xS6akd3m5NPhVyXCgPUk5H90vKzta";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -635,7 +635,7 @@ namespace Dms_Testing
             //create a string variable to store the result of validation
             string Error = "";
             //create test data
-            string reason = "0123456789";
+            string reason = "R0NbBzx4t7JurNmdazqNOExHL";
             //assign test data to property
             Error = AnHolidays.Valid(empName, empDepart, reason, startDate, enDate);
             //test to see if found
@@ -677,7 +677,7 @@ namespace Dms_Testing
         //    // create a variable to store the test data
         //    DateTime TestDate;
         //    //set the date to todys date
-        //    TestDate = DateTime.Now.Date;
+        //    TestDate = Convert.ToDateTime("09/03/2021");
         //    //change the data whatever the date in 100 years ago
         //    TestDate = TestDate.AddYears(-100);
         //    //convert the date time to string variable
@@ -698,7 +698,7 @@ namespace Dms_Testing
         //    //create a variable to store the test date data
         //    DateTime TestDate;
         //    //set the date totodays date
-        //    TestDate = DateTime.Now.Date;
+        //    TestDate = Convert.ToDateTime("09/03/2021");
         //    //change the date to whatever the date is less 1 day
         //    TestDate = TestDate.AddDays(-1);
         //    //convert the date variable to a string variable

@@ -155,6 +155,6 @@ public partial class AnHolidays : System.Web.UI.Page
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Response.Redirect("HolidaysDefault.aspx");
+        Response.Redirect("HolidaysDashboard.aspx");
     }
 }

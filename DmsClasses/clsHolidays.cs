@@ -139,7 +139,7 @@ namespace DmsClasses
                 
                    }
             //if the employee name is larger than 50 characters
-            if(empName.Length > 19)
+            if(empName.Length > 50)
             {
                 //record the error
                 Error = Error + "The employee name should be less than 19 characters : ";
@@ -155,7 +155,7 @@ namespace DmsClasses
 
             }
             //if the employee department is larger than 50 characters
-            if (empDepart.Length > 20)
+            if (empDepart.Length > 50)
             {
                 //record the error
                 Error = Error + "The employee name should be less than 20 characters : ";
@@ -171,7 +171,7 @@ namespace DmsClasses
 
             }
             //if the reason is larger than 50 characters
-            if (reason.Length > 20)
+            if (reason.Length > 50)
             {
                 //record the error
                 Error = Error + "The reason should be less than 20 characters : ";
@@ -179,7 +179,7 @@ namespace DmsClasses
 
             ////create a temporary variable to store the test date data
             //DateTime DateTemp;
-          
+
             ////copy the date added value to date temp
             //DateTemp = Convert.ToDateTime(startDate);
 
@@ -189,10 +189,10 @@ namespace DmsClasses
             //    Error = Error + "The date cannot be so old : ";
             //}
 
-            ////check to see if the date is greater than today's date
+            //check to see if the date is greater than today's date
             //if (DateTemp > DateTime.Now.Date)
             //{
-            //    //record the error
+            //    record the error
             //    Error = Error + "The date cannot be in the future : ";
             //}
 
