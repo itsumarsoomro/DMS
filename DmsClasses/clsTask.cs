@@ -48,7 +48,7 @@ namespace DmsClasses
             //add the parameter for the address no to search for
             DB.AddParameter("@TaskID", taskID);
             //excute the stored procedure
-            DB.Execute("sproc_tblTaskID_FilterByTaskID");
+            DB.Execute("sproc_tblTask_FilterByTaskID");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {

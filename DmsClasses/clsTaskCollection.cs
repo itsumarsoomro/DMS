@@ -118,7 +118,7 @@ namespace DmsClasses
             DB.AddParameter("@TaskName", Task);
             //send the Task Parameter to thje database
 
-           DB.Execute("sproc_tblTaskID_FilterByTaskID");
+           DB.Execute("sproc_tblTask_FilterTaskID");
             //populate the array list with the data table
             PopulateArray(DB);
         }
