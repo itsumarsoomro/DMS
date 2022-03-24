@@ -8,12 +8,13 @@
     <style type="text/css">
         .auto-style1 {
             position: absolute;
-            top: 334px;
+            top: 359px;
             left: 478px;
             z-index: 1;
             width: 202px;
             height: 47px;
             border-radius: 16px;
+            right: 871px;
         }
         .auto-style1:hover{
         color: white;
@@ -25,7 +26,7 @@
         }
         .auto-style3 {
             position: absolute;
-            top: 331px;
+            top: 358px;
             left: 826px;
             z-index: 1;
             width: 195px;
@@ -43,7 +44,7 @@
         }
         .auto-style4 {
             position: absolute;
-            top: 434px;
+            top: 452px;
             left: 651px;
             z-index: 1;
             width: 202px;
@@ -55,8 +56,7 @@
             background-color: #255BC7;
             border-radius: 22px;
             border-color: white;
-            border-style: none;
-            
+            border-style: none;            
         }
         * 
         {  
@@ -137,6 +137,39 @@
             height: 21px;
             border-radius: 16px;
         }
+        .auto-style11 {
+            position: absolute;
+            top: 275px;
+            left: 477px;
+            z-index: 1;
+            width: 202px;
+            height: 47px;
+            border-radius: 16px;
+            right: 872px;
+        }
+        .auto-style11:hover{
+            color: white;
+            background-color: #255BC7;
+            border-radius: 22px;
+            border-color: white;
+            border-style: none;            
+        }
+        .auto-style12 {
+            position: absolute;
+            top: 276px;
+            left: 822px;
+            z-index: 1;
+            width: 202px;
+            height: 47px;
+            border-radius: 16px;
+        }
+        .auto-style12:hover{
+            color: white;
+            background-color: #255BC7;
+            border-radius: 22px;
+            border-color: white;
+            border-style: none;            
+        }
     </style>
     </head>
 <body>
@@ -164,7 +197,9 @@
         <br />
         <br />
         <br />
+        <asp:Button ID="Button1" runat="server" BorderColor="Black" CssClass="auto-style11" Font-Bold="True" Font-Size="Large" Text="News" />
         <br />
+        <asp:Button ID="Button2" runat="server" BorderColor="Black" CssClass="auto-style12" Font-Bold="True" Font-Size="Large" Text="Staff" />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
@@ -173,10 +208,10 @@
     
     <br /> 
         <br />
-        <asp:Button ID="btnTask" runat="server" CssClass="auto-style3" OnClick="btnTask_Click" Text="Task" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" Height="47px" />
+        <asp:Button ID="btnTask" runat="server" CssClass="auto-style3" OnClick="btnTask_Click" Text="Task" Font-Bold="True" Font-Size="Large" Height="47px" BorderColor="Black" />
 
-        <asp:Button ID="btnExpenses" runat="server" CssClass="auto-style1" OnClick="btnExpenses_Click" Text="Expenses" BorderStyle="Solid" Font-Bold="True" Font-Size="Large" />
-        <asp:Button ID="btnHolidays" runat="server" Text="Holidays" BorderColor="Black" BorderStyle="Solid" CssClass="auto-style4" Font-Bold="True" OnClick="Button1_Click" Font-Size="Large" Height="47px" />
+        <asp:Button ID="btnExpenses" runat="server" CssClass="auto-style1" OnClick="btnExpenses_Click" Text="Expenses" Font-Bold="True" Font-Size="Large" BorderColor="Black" />
+        <asp:Button ID="btnHolidays" runat="server" Text="Holidays" BorderColor="Black" CssClass="auto-style4" Font-Bold="True" OnClick="Button1_Click" Font-Size="Large" Height="47px" />
         <br />
         <br />
         <br />

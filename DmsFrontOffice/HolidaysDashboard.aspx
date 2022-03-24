@@ -50,7 +50,7 @@
         <%-- layout of the  page --%>
     <div class="head">
         <br />
-        <asp:Button ID="Button1" runat="server" CssClass="auto-style4" OnClick="Button1_Click" Text="Logout" />
+        <asp:Button ID="Button1" runat="server" CssClass="auto-style4" OnClick="Button1_Click" Text="Logout" BorderColor="#CC3300" Font-Bold="True" />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" BackColor="#3C424F" Font-Bold="True" Font-Size="XX-Large" ForeColor="#51EC60" Text="DMS"></asp:Label>
@@ -65,7 +65,7 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:ListBox ID="lstHolidays" runat="server" Height="185px" Width="310px"></asp:ListBox>
+        <asp:ListBox ID="lstHolidays" runat="server" Height="185px" Width="310px" BackColor="White" Font-Bold="True" ForeColor="Black"></asp:ListBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="lblError" runat="server" BackColor="Silver" Text="[lblError]"></asp:Label>
@@ -79,21 +79,21 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnApplyAll" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="28px" Text="Apply All" Width="95px" />
+        <asp:Button ID="btnApplyAll" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="28px" Text="Apply All" Width="95px" style="border-radius: 16px;"/>
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnDisplayAll" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="28px" Text="Display All" Width="95px" />
+        <asp:Button ID="btnDisplayAll" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="28px" Text="Display All" Width="95px" style="border-radius: 16px;" />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnAdd" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" OnClick="btnAdd_Click" Text="Add +" Width="67px" />
+        <asp:Button ID="btnAdd" runat="server" BorderColor="#51EC60" BorderStyle="Solid" Font-Bold="True" Height="30px" OnClick="btnAdd_Click" Text="Add +" Width="67px" style="border-radius: 16px;" />
 &nbsp;&nbsp;
-        <asp:Button ID="btnEdit" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Edit" Width="67px" OnClick="btnEdit_Click" />
+        <asp:Button ID="btnEdit" runat="server" BorderColor="#FFCC00" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Edit" Width="67px" OnClick="btnEdit_Click" style="border-radius: 16px;" />
 &nbsp;&nbsp;
-        <asp:Button ID="btnDelete" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Delete x" Width="67px" OnClick="btnDelete_Click" />
+        <asp:Button ID="btnDelete" runat="server" BorderColor="Red" BorderStyle="Solid" Font-Bold="True" Height="30px" Text="Delete x" Width="67px" OnClick="btnDelete_Click" style="border-radius: 16px;" />
 
     &nbsp;&nbsp;
-        <asp:Button ID="btnHome" runat="server" Font-Bold="True" Height="30px" OnClick="btnHome_Click" Text="Home" Width="72px" />
+        <asp:Button ID="btnHome" runat="server" Font-Bold="True" Height="30px" OnClick="btnHome_Click" Text="Home" Width="72px" style="border-radius: 16px;" BorderColor="#51EC60" />
 
     </div>
     </div>

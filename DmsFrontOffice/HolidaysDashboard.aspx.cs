@@ -98,6 +98,6 @@ public partial class HolidaysDefault : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default.aspx");
+        Response.Redirect("HolidaysPositions.aspx");
     }
 }

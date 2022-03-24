@@ -6,6 +6,9 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
+        ::placeholder{
+            color: black;
+        }
         .auto-style1 {
             height: 357px;
             position: absolute;
@@ -18,23 +21,24 @@
         .auto-style2 {
             margin-top: 0px;
              position: absolute;
-            top: 157px;
-            left: 192px;
+            top: 165px;
+            left: 73px;
             z-index: 1;
+            width: 280px;
         }
         .auto-style3 {
-        position: absolute;
-        top: 830px;
-        left: 163px;
-        z-index: 1;
-        width: 74px;
-        height: 39px;
-        border-radius: 16px;
+            position: absolute;
+            top: 830px;
+            left: 163px;
+            z-index: 1;
+            width: 74px;
+            height: 39px;
+            border-radius: 16px;
         }
         .auto-style10 {
             position: absolute;
-            top: 265px;
-            left: 29px;
+            top: 279px;
+            left: 78px;
             z-index: 1;
             height: 19px;
             margin-bottom: 1px;
@@ -43,8 +47,9 @@
             height: 16px;
             position: absolute;
             top: 93px;
-            left: 191px;
+            left: 73px;
             z-index: 1;
+            width: 280px;
         }
         * 
         {  
@@ -80,102 +85,63 @@
         .auto-style12 {
             margin-top: 0px;
             position: absolute;
-            top: 292px;
-            left: 28px;
+            top: 310px;
+            left: 73px;
             z-index: 1;
             height: 30px;
+            border-radius: 16px;
         }
         .auto-style13 {
             margin-top: 0px;
             position: absolute;
-            top: 294px;
-            left: 294px;
+            top: 310px;
+            left: 255px;
             z-index: 1;
             height: 30px;
+            border-radius: 16px;
         }
         .auto-style14 {
             margin-top: 0px;
             position: absolute;
-            top: 221px;
-            left: 192px;
+            top: 235px;
+            left: 71px;
             z-index: 1;
-            width: 189px;
+            width: 280px;
             height: 24px;
-            bottom: 108px;
+            bottom: 90px;
         }
         .auto-style15 {
             margin-top: 0px;
             position: absolute;
-            top: 189px;
-            left: 192px;
+            top: 201px;
+            left: 73px;
             z-index: 1;
+            width: 280px;
         }
         .auto-style16 {
             margin-top: 0px;
             position: absolute;
-            top: 125px;
-            left: 191px;
+            top: 129px;
+            left: 73px;
             z-index: 1;
-            width: 179px;
-        }
-        .auto-style17 {
-            margin-top: 0px;
-            position: absolute;
-            top: 227px;
-            left: 26px;
-            z-index: 1;
-        }
-        .auto-style18 {
-            margin-top: 0px;
-            position: absolute;
-            top: 195px;
-            left: 26px;
-            z-index: 1;
-        }
-        .auto-style19 {
-            margin-top: 0px;
-            position: absolute;
-            top: 162px;
-            left: 26px;
-            z-index: 1;
-        }
-        .auto-style20 {
-            margin-top: 0px;
-            position: absolute;
-            top: 131px;
-            left: 25px;
-            z-index: 1;
-        }
-        .auto-style21 {
-            margin-top: 0px;
-            position: absolute;
-            top: 97px;
-            left: 25px;
-            z-index: 1;
-        }
-        .auto-style22 {
-            margin-top: 0px;
-            position: absolute;
-            top: 63px;
-            left: 25px;
-            z-index: 1;
+            width: 280px;
         }
         .auto-style23 {
             margin-top: 0px;
             position: absolute;
-            top: 60px;
-            left: 300px;
+            top: 59px;
+            left: 286px;
             z-index: 1;
             height: 29px;
+            width: 74px;
         }
         .auto-style24 {
             margin-top: 0px;
             position: absolute;
-            top: 59px;
-            left: 191px;
+            top: 57px;
+            left: 73px;
             z-index: 1;
-            width: 101px;
-            right: 136px;
+            width: 206px;
             height: 25px;
         }
         .auto-style25 {
@@ -199,30 +165,30 @@
         .auto-style27 {
             margin-top: 0px;
             position: absolute;
-            top: 4px;
-            left: 144px;
+            top: -24px;
+            left: -13px;
             z-index: 1;
-        }
-        .auto-style28 {
-            height: 39px;
-            background-color: #51EC60;
-            
+            width: 461px;
+            height: 60px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
         }
         .auto-style29 {
             width: 463px;
             height: 400px;
             background-color: silver;
             border-radius: 15px;
-            margin-left: 39;
+            /*margin-left: 39;*/
         }
         .auto-style30 {
             margin-top: 0px;
             position: absolute;
-            top: 253px;
-            left: 217px;
+            top: 270px;
+            left: 190px;
             z-index: 1;
             width: 164px;
             height: 13px;
+            right: 78px;
         }
         </style>
         </head>
@@ -245,6 +211,8 @@
 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+                <br />
+
             </div>
             </div>
     
@@ -263,43 +231,36 @@
         </div>
 
         <div class="auto-style1" style="background-color: silver;">
-            <asp:Label ID="Label4" runat="server" BackColor="#51EC60" BorderColor="#51EC60" CssClass="auto-style27" Font-Bold="True" Font-Size="X-Large" Text="Holiday Form" ForeColor="White"></asp:Label>
-            <hr class="auto-style28" />
+            <asp:Label ID="Label4" runat="server" BackColor="#51EC60" BorderColor="#51EC60" CssClass="auto-style27" Font-Bold="True" Font-Size="45px" Text="Holidays Form" ForeColor="White"></asp:Label>
             <br />
-            <asp:Label ID="lblId" runat="server" Text="Employee ID" CssClass="auto-style22" BackColor="Silver"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtId" runat="server" BorderStyle="Solid" CssClass="auto-style24"></asp:TextBox>
+            <asp:TextBox ID="txtId" runat="server" BorderStyle="Solid" CssClass="auto-style24" placeholder="Please enter your ID#" Height="28px" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             &nbsp;&nbsp;
-            <asp:Button ID="btnFind" runat="server" OnClick="Button1_Click" Text="Find" Width="82px" CssClass="auto-style23" />
             <br />
-            <asp:Label ID="lblName" runat="server" Text="Employee Name" CssClass="auto-style21" BackColor="Silver"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtName" runat="server" CssClass="auto-style11" BorderStyle="Solid" Height="24px" Width="189px"></asp:TextBox>
+            <asp:TextBox ID="txtName" runat="server" CssClass="auto-style11" BorderStyle="Solid" Height="28px" placeholder="Please enter your Name" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             <br />
-            <asp:Label ID="lblDepartment" runat="server" Text="Employee Department " CssClass="auto-style20" BackColor="Silver"></asp:Label>
-            <asp:TextBox ID="txtDepartment" runat="server" BorderStyle="Solid" CssClass="auto-style16" Height="24px" Width="189px"></asp:TextBox>
+            <asp:TextBox ID="txtDepartment" runat="server" BorderStyle="Solid" CssClass="auto-style16" Height="28px" placeholder="Please enter your department" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
+            <asp:Button ID="btnFind" runat="server" OnClick="Button1_Click" Text="Find" CssClass="auto-style23" BorderColor="#51EC60" Font-Bold="True" style="border-radius: 16px;"/>
             <br />
-            <asp:Label ID="lblReason" runat="server" Text="Holiday Reason" CssClass="auto-style19" BackColor="Silver"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtReason" runat="server" CssClass="auto-style2" BorderStyle="Solid" Height="24px" Width="189px"></asp:TextBox>
+            <asp:TextBox ID="txtReason" runat="server" CssClass="auto-style2" BorderStyle="Solid" Height="28px" placeholder="Please enter holiday reason " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             <br />
-            <asp:Label ID="lblStartdate" runat="server" Text="Holiday Start Date" CssClass="auto-style18" BackColor="Silver"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtStartdate" runat="server" BorderStyle="Solid" CssClass="auto-style15" Height="24px" Width="189px"></asp:TextBox>
+            <asp:TextBox ID="txtStartdate" runat="server" BorderStyle="Solid" CssClass="auto-style15" Height="28px" placeholder="Please enter start date i.e 03/23/2022 12:00:00 AM " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             <br />
-            <asp:Label ID="lblEndate" runat="server" Text="Holiday End Date " CssClass="auto-style17" BackColor="Silver"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtEndate" runat="server" CssClass="auto-style14" BorderStyle="Solid"></asp:TextBox>
+            <asp:TextBox ID="txtEndate" runat="server" CssClass="auto-style14" BorderStyle="Solid" placeholder="Please enter end date i.e 03/23/2022 12:00:00 AM " Height="28px" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             <br />
             <br />
         <asp:Label ID="lblError" runat="server" CssClass="auto-style10" BackColor="Silver"></asp:Label>
             <br />
             <br />
             <br />
-            <asp:Button ID="btnOk" runat="server" Text="Ok" Width="94px" OnClick="btnOk_Click" CssClass="auto-style13" />
+            <asp:Button ID="btnOk" runat="server" Text="Ok" Width="94px" OnClick="btnOk_Click" CssClass="auto-style13" BorderColor="#51EC60" Font-Bold="True" />
 &nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="96px" OnClick="btnCancel_Click" CssClass="auto-style12" />
-            <asp:Label ID="Label5" runat="server" BackColor="Silver" CssClass="auto-style30" Font-Size="Small" Text="i.e 23/03/2022 12:00:00 AM"></asp:Label>
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="96px" OnClick="btnCancel_Click" CssClass="auto-style12" BorderColor="Red" Font-Bold="True" />
+            <asp:Label ID="Label5" runat="server" BackColor="Silver" CssClass="auto-style30" Font-Size="Small" Text="i.e 03/23/2022 12:00:00 AM"></asp:Label>
         </div>
        
     </form>

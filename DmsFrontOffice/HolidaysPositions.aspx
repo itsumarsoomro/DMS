@@ -79,10 +79,10 @@
         <br />
         <br />
         <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Font-Bold="True" Height="36px" OnClick="Button1_Click" Text="Admin" Width="102px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Font-Bold="True" Height="36px" OnClick="Button1_Click" Text="Admin" Width="102px" BorderColor="#51EC60" style="border-radius: 16px;" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button2" runat="server" Font-Bold="True" Height="36px" OnClick="Button2_Click" Text="Employee's" Width="102px" />
+        <asp:Button ID="Button2" runat="server" Font-Bold="True" Height="36px" OnClick="Button2_Click" Text="Employee's" Width="102px" BorderColor="#51EC60" style="border-radius: 16px;" />
         </div>
     </div>
     
