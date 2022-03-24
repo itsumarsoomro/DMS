@@ -8,6 +8,7 @@ using DmsClasses;
 
 public partial class HolidaysDefault : System.Web.UI.Page
 {
+
     //variable to store the primary key wtih page level scope
     //Int32 EmpID;
 
@@ -99,5 +100,81 @@ public partial class HolidaysDefault : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         Response.Redirect("HolidaysPositions.aspx");
+    }
+
+    protected void btnDisplayAll_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnApplyAll_Click(object sender, EventArgs e)
+    {
+        //declare var to store the record count
+        Int32 RecordCount;
+        //assign the results of the DisplayAddresses function to the record count var
+        RecordCount = DisplayHolidays(txtboxEmpID.Text);
+        //display the number of records found
+        lblError.Text = RecordCount + " records found";
+    }
+
+    private int DisplayHolidays(string ReasonFilter)
+    {
+        ///this function accepts one parameter - the post code to filter the list on
+        ///it populates the list box with data from the middle layer class
+        ///it returns a single value, the number of records found
+
+        //create a new instance of the clsAddress
+        clsHolidaysCollection HolidaysList = new clsHolidaysCollection();
+        //var to store the count of records
+        Int32 RecordCount;
+
+        //var to store the house no
+        string EmpID;
+        string EmpName;
+        string EmpDepart;
+        //var to store the street name
+        string Reason;
+        //var to store the primary key value
+        string StartDate;
+        string EnDate;
+    
+
+        //var to store the index
+        // string StockID;
+        Int32 Index = 0;
+        //clear the list of any existing items
+        lstHolidays.Items.Clear();
+
+
+        //call the filter by LocationFilter method
+        HolidaysList.ReportByReason(ReasonFilter);
+        //get the count of records found
+        RecordCount = HolidaysList.Count;
+        //loop through each record found using the index to point to each record in the data table
+        while (Index < RecordCount)
+        {
+            EmpID = Convert.ToString(HolidaysList.HolidaysList[Index].EmpID);
+            //get the house no from the query results
+            EmpName = Convert.ToString(HolidaysList.HolidaysList[Index].EmpName);
+            //get the street from the query results
+            EmpDepart = Convert.ToString(HolidaysList.HolidaysList[Index].EmpDepart);
+            Reason = Convert.ToString(HolidaysList.HolidaysList[Index].Reason);
+            StartDate = Convert.ToString(HolidaysList.HolidaysList[Index].StartDate);
+            EnDate = Convert.ToString(HolidaysList.HolidaysList[Index].EndDate);
+
+
+            //set up a new object of class list item 
+
+            ListItem NewItem = new ListItem(EmpID + " : EmpID" + " | " + "EmpName: " + EmpName + " |" + " EmpDepart: " + EmpDepart + " |" + " Reason: " + Reason + " |" + " StartDAte: " + StartDate + " |" + " EndDate: " + EnDate);
+
+            //add the new item to the list
+
+            lstHolidays.Items.Add(NewItem);
+
+            //increment the index
+            Index++;
+        }
+        //return the number of records found
+        return RecordCount;
     }
 }
