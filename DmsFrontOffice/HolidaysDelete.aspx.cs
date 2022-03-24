@@ -33,12 +33,12 @@ public partial class HolidaysDelete : System.Web.UI.Page
         //delete the record
         DeleteHoliday();
         //redirect back to the main page
-        Response.Redirect("HolidaysDefault.aspx");
+        Response.Redirect("HolidaysDashboard.aspx");
     }
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         //redirect back to the main page
-        Response.Redirect("HolidaysDefault.aspx");
+        Response.Redirect("HolidaysDashboard.aspx");
     }
 }

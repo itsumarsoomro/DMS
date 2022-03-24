@@ -170,6 +170,24 @@
             border-color: white;
             border-style: none;            
         }
+        .auto-style13 {
+            position: absolute;
+            top: 900px;
+            left: 474px;
+            z-index: 1;
+            width: 38px;
+            height: 21px;
+            border-radius: 16px;
+        }
+        .auto-style14 {
+            position: absolute;
+            top: 900px;
+            left: 537px;
+            z-index: 1;
+            width: 48px;
+            height: 18px;
+            border-radius: 16px;
+        }
     </style>
     </head>
 <body>
@@ -241,7 +259,10 @@
         <asp:Label ID="Label3" runat="server" BackColor="#3C424F" BorderColor="#3C424F" CssClass="auto-style7" Font-Bold="True" ForeColor="White" Text="Copyright © 2022 DMS"></asp:Label>
         <asp:HyperLink ID="hlinkHolidays" runat="server" BackColor="#3C424F" CssClass="auto-style8" Font-Bold="True" ForeColor="White" NavigateUrl="~/HolidaysDefault.aspx">Holidays</asp:HyperLink>
         <asp:HyperLink ID="hlnkExpenses" runat="server" BackColor="#3C424F" CssClass="auto-style10" Font-Bold="True" ForeColor="White" NavigateUrl="~/ExpensesDefault.aspx">Expenses</asp:HyperLink>
-        <asp:HyperLink ID="HyperLink2" runat="server" BackColor="#3C424F" CssClass="auto-style9" Font-Bold="True" ForeColor="White" NavigateUrl="~/AnTask.aspx">Task</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" BackColor="#3C424F" CssClass="auto-style9" Font-Bold="True" ForeColor="White" NavigateUrl="~/TaskDefault.aspx">Task</asp:HyperLink>
+
+        <asp:HyperLink ID="HyperLink3" runat="server" BackColor="#3C424F" CssClass="auto-style13" Font-Bold="True" ForeColor="White">Staff</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink4" runat="server" BackColor="#3C424F" CssClass="auto-style14" Font-Bold="True" ForeColor="White">News</asp:HyperLink>
 
     </div>
 
