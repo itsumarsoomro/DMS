@@ -212,7 +212,7 @@ namespace Dms_Testing
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.StartDate != Convert.ToDateTime("19/03/2022"))
+            if (AnHolidays.StartDate != Convert.ToDateTime("03/19/2022"))
             {
                 OK = false;
             }
@@ -234,7 +234,7 @@ namespace Dms_Testing
             //invoke the method
             Found = AnHolidays.Find(EmpID);
             //check the Emp ID
-            if (AnHolidays.EndDate != Convert.ToDateTime("20/03/2022"))
+            if (AnHolidays.EndDate != Convert.ToDateTime("03/20/2022"))
             {
                 OK = false;
             }

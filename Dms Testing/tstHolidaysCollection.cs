@@ -34,7 +34,7 @@ namespace Dms_Testing
             TestItem.EmpDepart = "Health";
             TestItem.Reason = "Health issues";
             TestItem.StartDate = DateTime.Now.Date;
-            TestItem.EndDate = Convert.ToDateTime("23/3/2022"); //set according to laptob format otherwise causing errors
+            TestItem.EndDate = Convert.ToDateTime("3/23/2022"); //set according to laptob format otherwise causing errors
             ///add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
@@ -70,7 +70,7 @@ namespace Dms_Testing
             TestHolidays.EmpDepart = "Health";
             TestHolidays.Reason = "Health issues";
             TestHolidays.StartDate = DateTime.Now.Date;
-            TestHolidays.EndDate = Convert.ToDateTime("23/3/2022"); //set according to laptob format otherwise causing errors
+            TestHolidays.EndDate = Convert.ToDateTime("3/23/2022"); //set according to laptob format otherwise causing errors
             //assign the data to the property
             AllHolidays.ThisHolidays = TestHolidays;
             //test to see that the two valuees are the same
@@ -94,7 +94,7 @@ namespace Dms_Testing
             TestItem.EmpDepart = "Health";
             TestItem.Reason = "Health issues";
             TestItem.StartDate = DateTime.Now.Date;
-            TestItem.EndDate = Convert.ToDateTime("23/3/2022");  //set according to laptob format otherwise causing errors
+            TestItem.EndDate = Convert.ToDateTime("3/23/2022");  //set according to laptob format otherwise causing errors
             ///add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
@@ -127,8 +127,8 @@ namespace Dms_Testing
             TestItem.EmpName = "23";
             TestItem.EmpDepart = "test";
             TestItem.Reason = "test";
-            TestItem.StartDate = Convert.ToDateTime("19/3/2022"); //set the date according to laptob format i.e day/month/year otherwise causing errors
-            TestItem.EndDate = Convert.ToDateTime("20/3/2022"); //set according to laptob format otherwise causing errors
+            TestItem.StartDate = Convert.ToDateTime("3/19/2022"); //set the date according to laptob format i.e day/month/year otherwise causing errors
+            TestItem.EndDate = Convert.ToDateTime("3/20/2022"); //set according to laptob format otherwise causing errors
             //set this addres to the test data
             AllHolidays.ThisHolidays = TestItem;
             //add the record
@@ -154,8 +154,8 @@ namespace Dms_Testing
             TestItem.EmpName = "23";
             TestItem.EmpDepart = "test";
             TestItem.Reason = "test";
-            TestItem.StartDate = Convert.ToDateTime("19/3/2022"); //set according to laptob format otherwise causing errors
-            TestItem.EndDate = Convert.ToDateTime("20/3/2022"); //set according to laptob format otherwise causing errors
+            TestItem.StartDate = Convert.ToDateTime("3/19/2022"); //set according to laptob format otherwise causing errors
+            TestItem.EndDate = Convert.ToDateTime("3/20/2022"); //set according to laptob format otherwise causing errors
             //set this addres to the test data
             AllHolidays.ThisHolidays = TestItem;
             //add the record
@@ -185,8 +185,8 @@ namespace Dms_Testing
             TestItem.EmpName = "23";
             TestItem.EmpDepart = "test";
             TestItem.Reason = "test";
-            TestItem.StartDate = Convert.ToDateTime("19/3/2022"); //set according to laptob format otherwise causing errors
-            TestItem.EndDate = Convert.ToDateTime("20/3/2022"); //set according to laptob format otherwise causing errors
+            TestItem.StartDate = Convert.ToDateTime("3/19/2022"); //set according to laptob format otherwise causing errors
+            TestItem.EndDate = Convert.ToDateTime("3/20/2022"); //set according to laptob format otherwise causing errors
             //set this addres to the test data
             AllHolidays.ThisHolidays = TestItem;
             //add the record
@@ -197,8 +197,8 @@ namespace Dms_Testing
             TestItem.EmpName = "24";
             TestItem.EmpDepart = "tests";
             TestItem.Reason = "tests";
-            TestItem.StartDate = Convert.ToDateTime("17/3/2022"); //set according to laptob format otherwise causing errors
-            TestItem.EndDate = Convert.ToDateTime("19/3/2022"); //set according to laptob format otherwise causing errors
+            TestItem.StartDate = Convert.ToDateTime("3/17/2022"); //set according to laptob format otherwise causing errors
+            TestItem.EndDate = Convert.ToDateTime("3/19/2022"); //set according to laptob format otherwise causing errors
             //set the record based inn thew new test data
             AllHolidays.ThisHolidays = TestItem;
             //update the record
