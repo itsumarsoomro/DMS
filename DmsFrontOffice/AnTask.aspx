@@ -17,13 +17,15 @@
             <asp:TextBox ID="TextBoxTaskName" runat="server" style="z-index: 1; left: 96px; top: 217px; position: absolute"></asp:TextBox>
         </p>
         <p>
-            <asp:Label ID="LabelTaskName" runat="server" style="z-index: 1; left: 13px; top: 218px; position: absolute; height: 22px; width: 85px" Text="Task Name"></asp:Label>
+            <asp:Label ID="LabelTaskName" runat="server" style="z-index: 1; left: 8px; top: 217px; position: absolute; height: 22px; width: 85px" Text="Task Name"></asp:Label>
             <asp:TextBox ID="TextBoxTaskID" runat="server" style="z-index: 1; top: 255px; position: absolute; left: 94px"></asp:TextBox>
         </p>
         <asp:Label ID="LabelTaskID" runat="server" style="z-index: 1; left: 18px; top: 257px; position: absolute; width: 61px" Text="TaskID"></asp:Label>
+        <asp:Button ID="btnFind" runat="server" OnClick="btnFind_Click" style="z-index: 1; left: 182px; top: 293px; position: absolute" Text="Find" />
         <p>
-            <asp:Button ID="ButtonOk" runat="server" OnClick="ButtonOk_Click" style="z-index: 1; left: 17px; top: 292px; position: absolute; height: 25px; width: 31px; right: 569px" Text="Ok" />
+            <asp:Button ID="ButtonOk" runat="server" OnClick="ButtonOk_Click" style="z-index: 1; left: 16px; top: 292px; position: absolute; height: 25px; width: 31px; right: 566px" Text="Ok" />
         </p>
+        <asp:Label ID="LabelError" runat="server" style="z-index: 1; left: 24px; top: 336px; position: absolute; margin-bottom: 25px" Text="lblError"></asp:Label>
         <asp:Button ID="ButtonCncel" runat="server" style="z-index: 1; left: 80px; top: 293px; position: absolute" Text="Cancel" />
     </form>
 </body>
