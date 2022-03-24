@@ -47,6 +47,7 @@
     <Compile Include="clsHolidays.cs" />
     <Compile Include="clsHolidaysCollection.cs" />
     <Compile Include="clsTask.cs" />
+    <Compile Include="clsTaskCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
