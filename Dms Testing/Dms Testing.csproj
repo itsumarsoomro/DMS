@@ -52,6 +52,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstExpenses.cs" />
     <Compile Include="tstHolidays.cs" />
+    <Compile Include="tstStaff.cs" />
+    <Compile Include="tstStaffCollection.cs" />
     <Compile Include="tstTask.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DmsClasses\DmsClasses.csproj">
-      <Project>{756D5C20-A961-4F41-9AB9-2C1A4A737BC5}</Project>
+      <Project>{756d5c20-a961-4f41-9ab9-2c1a4a737bc5}</Project>
       <Name>DmsClasses</Name>
     </ProjectReference>
   </ItemGroup>

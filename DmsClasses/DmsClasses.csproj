@@ -44,6 +44,8 @@
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsExpenses.cs" />
     <Compile Include="clsHolidays.cs" />
+    <Compile Include="clsStaff.cs" />
+    <Compile Include="clsStaffCollection.cs" />
     <Compile Include="clsTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
