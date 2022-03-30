@@ -247,7 +247,7 @@
             <asp:TextBox ID="txtReason" runat="server" CssClass="auto-style2" BorderStyle="Solid" Height="28px" placeholder="Please enter holiday reason " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtStartdate" runat="server" BorderStyle="Solid" CssClass="auto-style15" Height="28px" placeholder="Please enter start date i.e 03/23/2022 12:00:00 AM " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
+            <asp:TextBox ID="txtStartdate" runat="server" BorderStyle="Solid" CssClass="auto-style15" Height="28px" placeholder="Please enter start date i.e 03/23/2022 12:00:00 AM " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;" OnTextChanged="txtStartdate_TextChanged"></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtEndate" runat="server" CssClass="auto-style14" BorderStyle="Solid" placeholder="Please enter end date i.e 03/23/2022 12:00:00 AM " Height="28px" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>

@@ -34,7 +34,7 @@ public partial class AnHolidays : System.Web.UI.Page
         //create an instance of the holidays
         DmsClasses.clsHolidaysCollection HolidayBook = new DmsClasses.clsHolidaysCollection();
         //validate the data on the web form
-        String Error = HolidayBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, txtStartdate.Text, txtEndate.Text);
+        String Error = HolidayBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, Convert.ToDateTime(txtEndate.Text), Convert.ToDateTime(txtEndate.Text));
         //if the data is Ok then add it to the object
         if (Error == "")
         {
@@ -52,6 +52,8 @@ public partial class AnHolidays : System.Web.UI.Page
         }
         else
         {
+
+            lblError.Visible = true;
             //report an error
             lblError.Text = "There were problems with the data entered " + Error;
         }
@@ -63,7 +65,7 @@ public partial class AnHolidays : System.Web.UI.Page
         //create an instance of the holiday book
         DmsClasses.clsHolidaysCollection HolidaysBook = new DmsClasses.clsHolidaysCollection();
         //validate the data on the web form
-        String Error = HolidaysBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, txtStartdate.Text, txtEndate.Text);
+        String Error = HolidaysBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, Convert.ToDateTime(txtStartdate.Text), Convert.ToDateTime(txtEndate.Text));
         //if the data is OK then add it to the object
         if (Error == "")
         {
@@ -82,6 +84,7 @@ public partial class AnHolidays : System.Web.UI.Page
         }
         else
         {
+            lblError.Visible = true;
             //report an error
             lblError.Text = "There were problems with the data entered" + Error;
         }
@@ -148,6 +151,7 @@ public partial class AnHolidays : System.Web.UI.Page
 
         else
         {
+            lblError.Visible = true;
             //return error message
             lblError.Text = "This Employee ID does not exist please try again later.";
         }
@@ -156,5 +160,10 @@ public partial class AnHolidays : System.Web.UI.Page
     protected void btnCancel_Click(object sender, EventArgs e)
     {
         Response.Redirect("HolidaysDashboard.aspx");
+    }
+
+    protected void txtStartdate_TextChanged(object sender, EventArgs e)
+    {
+
     }
 }
