@@ -103,8 +103,8 @@ namespace DmsClasses
                 mEmpName = Convert.ToString(DB.DataTable.Rows[0]["EmpName"]);
                 mEmpDepart = Convert.ToString(DB.DataTable.Rows[0]["Department"]);
                 mReason = Convert.ToString(DB.DataTable.Rows[0]["Reason"]);
-                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["StartDate"]);
-                mEndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["EndDate"]);
+                mStartDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayStartDate"]);
+                mEndDate = Convert.ToDateTime(DB.DataTable.Rows[0]["HolidayEndDate"]);
                 return true;
             }
             //if no record was found
@@ -114,19 +114,164 @@ namespace DmsClasses
                 return false;
             }
 
-            //// set the private data members to test data value
+            // set the private data members to test data value
             //mEmpID = 22;
             //mEmpName = "Ali";
             //mEmpDepart = "IT";
             //mReason = "Fever";
             //mStartDate = Convert.ToDateTime("09/03/2021");
             //mEndDate = Convert.ToDateTime("05/03/2021");
-            ////always return true
+            //always return true
             //return true;
+        }
+
+        public string Valid(string empName, string empDepart, string reason, DateTime startDate, DateTime enDate)
+          
+        {
+            //create a string to store the error
+            string Error = "";
+          
+            //if the employee name is blank
+            if (empName.Length == 0)
+            {
+                //record the errror
+                Error = Error + "The employee name may not be blank : ";
+                
+                   }
+            //if the employee name is larger than 50 characters
+            if(empName.Length > 50)
+            {
+                //record the error
+                Error = Error + "The employee name should be less than 19 characters : ";
+            }
+
+
+
+            //if the employee department is blank
+            if (empDepart.Length == 0)
+            {
+                //record the errror
+                Error = Error + "The employee department may not be blank : ";
+
+            }
+            //if the employee department is larger than 50 characters
+            if (empDepart.Length > 50)
+            {
+                //record the error
+                Error = Error + "The employee name should be less than 20 characters : ";
+            }
+
+
+
+            //if the reason is blank
+            if (reason.Length == 0)
+            {
+                //record the errror
+                Error = Error + "The reason may not be blank : ";
+
+            }
+            //if the reason is larger than 50 characters
+            if (reason.Length > 50)
+            {
+                //record the error
+                Error = Error + "The reason should be less than 20 characters : ";
+            }
+
+            //create a temporary variable to store the test date data
+            DateTime DateTemp;
+
+            //copy the date added value to date temp
+            DateTemp = Convert.ToDateTime(startDate);
+
+            if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+            {
+                //record the error
+                Error = Error + "The date cannot be so old : ";
+            }
+
+            //check to see if the date is greater than today's date
+            if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+            {
+                //record the error
+                Error = Error + "The date cannot be in the future : ";
+            }
+
+
+            try
+            {
+                //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(startDate);
+                if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
+
+
+            //create a temporary variable to store the test date data
+            //DateTime DateTemp;
+
+            //copy the date added value to date temp
+            DateTemp = Convert.ToDateTime(enDate);
+
+            if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+            {
+                //record the error
+                Error = Error + "The date cannot be so old : ";
+            }
+
+            //check to see if the date is greater than today's date
+            if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+            {
+                //record the error
+                Error = Error + "The date cannot be in the future : ";
+            }
+
+
+            try
+            {
+                //copy the dateAdded value to the DateTemp variable
+                DateTemp = Convert.ToDateTime(enDate);
+                if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the past : ";
+                }
+                //check to see if the date is greater than today's date
+                if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+                {
+                    //record the error
+                    Error = Error + "The date cannot be in the future : ";
+                }
+            }
+            catch
+            {
+                //record the error
+                Error = Error + "The date was not a valid date : ";
+            }
+            //return any errors
+            return Error;
+
         }
     }
 
-  
-}
+    
+
+    }
+
+
+
 
 

@@ -11,4 +11,21 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
+
+    protected void btnExpenses_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ExpensesDefault.aspx");
+    }
+
+    protected void btnTask_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("TaskDefault.aspx");
+    }
+
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("HolidaysPositions.aspx");
+    }
 }

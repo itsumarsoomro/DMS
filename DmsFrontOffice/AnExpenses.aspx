@@ -40,14 +40,6 @@
             left: 90px;
             z-index: 1;
         }
-        .auto-style7 {
-            position: absolute;
-            top: 76px;
-            left: 90px;
-            z-index: 1;
-            width: 128px;
-            height: 17px;
-        }
         .auto-style8 {
             position: absolute;
             top: 225px;
@@ -75,6 +67,43 @@
             left: 8px;
             z-index: 1;
         }
+        .auto-style12 {
+            position: absolute;
+            top: 77px;
+            left: 90px;
+            z-index: 1;
+        }
+        .auto-style13 {
+            position: absolute;
+            top: 51px;
+            left: 399px;
+            z-index: 1;
+            margin-top: 1px;
+        }
+        .auto-style14 {
+            z-index: 1;
+            left: 583px;
+            top: 50px;
+            position: absolute;
+            height: 25px;
+            width: 54px;
+            right: 848px;
+        }
+        .auto-style15 {
+            position: absolute;
+            top: 53px;
+            left: 305px;
+            z-index: 1;
+            width: 84px;
+        }
+        .auto-style16 {
+            position: absolute;
+            top: 224px;
+            left: 189px;
+            z-index: 1;
+            height: 28px;
+            width: 62px;
+        }
     </style>
 </head>
 <body>
@@ -86,12 +115,15 @@
         <asp:Label ID="lblExpenses" runat="server" CssClass="auto-style3" Text="Expenses"></asp:Label>
         <asp:TextBox ID="txtName" runat="server" CssClass="auto-style4"></asp:TextBox>
         <asp:TextBox ID="txtExpenses" runat="server" CssClass="auto-style6"></asp:TextBox>
-        <asp:DropDownList ID="ddlCategory" runat="server" CssClass="auto-style7">
-        </asp:DropDownList>
         <asp:Button ID="btnOk" runat="server" CssClass="auto-style8" OnClick="btnOk_Click" Text="Ok" />
-        <asp:Button ID="btnCancel" runat="server" CssClass="auto-style9" Text="Cancel" />
+        <asp:Button ID="btnCancel" runat="server" CssClass="auto-style9" Text="Cancel" OnClick="btnCancel_Click" />
         <asp:Label ID="lblError" runat="server" CssClass="auto-style10"></asp:Label>
         <asp:CheckBox ID="chkActive" runat="server" CssClass="auto-style11" Text="Active" />
+        <asp:Button ID="btnFind" runat="server" Text="Find" CssClass="auto-style14" OnClick="btnFind_Click" />
+        <asp:TextBox ID="txtCategory" runat="server" CssClass="auto-style12"></asp:TextBox>
+        <asp:TextBox ID="txtExpensesNo" runat="server" CssClass="auto-style13"></asp:TextBox>
+        <asp:Label ID="lblExpensesNo" runat="server" CssClass="auto-style15" Text="ExpensesNo"></asp:Label>
+        <asp:Button ID="btnView" runat="server" CssClass="auto-style16" OnClick="btnView_Click" Text="View" />
     </form>
 </body>
 </html>

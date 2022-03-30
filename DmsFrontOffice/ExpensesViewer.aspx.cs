@@ -16,5 +16,12 @@ public partial class ExpensesViewer : System.Web.UI.Page
         AnExpenses = (clsExpenses)Session["AnExpenses"];
         //display the name for this entry
         Response.Write(AnExpenses.Name);
+        Response.Write(AnExpenses.Category);
+        Response.Write(AnExpenses.Expenses);
+    }
+
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AnExpenses.aspx");
     }
 }
