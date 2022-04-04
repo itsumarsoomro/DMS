@@ -21,8 +21,8 @@
         .auto-style2 {
             margin-top: 0px;
              position: absolute;
-            top: 165px;
-            left: 73px;
+            top: 164px;
+            left: 74px;
             z-index: 1;
             width: 280px;
         }
@@ -35,13 +35,23 @@
             height: 39px;
             border-radius: 16px;
         }
+         .auto-style4 {
+            height: 16px;
+            position: absolute;
+          
+            z-index: 1;
+            width: 280px;
+            left: 73px;
+            top: 200px;
+        }
         .auto-style10 {
             position: absolute;
-            top: 279px;
-            left: 78px;
+            top: 110px;
+            left: 471px;
             z-index: 1;
-            height: 19px;
+            height: 110px;
             margin-bottom: 1px;
+            width: 398px;
         }
         .auto-style11 {
             height: 16px;
@@ -99,24 +109,6 @@
             z-index: 1;
             height: 30px;
             border-radius: 16px;
-        }
-        .auto-style14 {
-            margin-top: 0px;
-            position: absolute;
-            top: 235px;
-            left: 71px;
-            z-index: 1;
-            width: 280px;
-            height: 24px;
-            bottom: 90px;
-        }
-        .auto-style15 {
-            margin-top: 0px;
-            position: absolute;
-            top: 201px;
-            left: 73px;
-            z-index: 1;
-            width: 280px;
         }
         .auto-style16 {
             margin-top: 0px;
@@ -190,6 +182,14 @@
             height: 13px;
             right: 78px;
         }
+        .auto-style31 {
+            height: 16px;
+            position: absolute;
+            z-index: 1;
+            width: 280px;
+            left: 73px;
+            top: 236px;
+        }
         </style>
         </head>
         <body>
@@ -234,33 +234,33 @@
             <asp:Label ID="Label4" runat="server" BackColor="#51EC60" BorderColor="#51EC60" CssClass="auto-style27" Font-Bold="True" Font-Size="45px" Text="Holidays Form" ForeColor="White"></asp:Label>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtId" runat="server" BorderStyle="Solid" CssClass="auto-style24" placeholder="Please enter your ID#" Height="28px" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
+            <asp:TextBox ID="txtId" runat="server" BorderStyle="Solid" CssClass="auto-style24" placeholder="Please enter your ID#" Height="28px" BorderColor="Black" ForeColor="Black" ></asp:TextBox>
             &nbsp;&nbsp;
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtName" runat="server" CssClass="auto-style11" BorderStyle="Solid" Height="28px" placeholder="Please enter your Name" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
+            <asp:TextBox ID="txtName" runat="server" CssClass="auto-style11" BorderStyle="Solid" Height="28px" placeholder="Please enter your Name" BorderColor="Black" ForeColor="Black"></asp:TextBox>
             <br />
-            <asp:TextBox ID="txtDepartment" runat="server" BorderStyle="Solid" CssClass="auto-style16" Height="28px" placeholder="Please enter your department" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
+            <asp:TextBox ID="txtDepartment" runat="server" BorderStyle="Solid" CssClass="auto-style16" Height="28px" placeholder="Please enter your department" BorderColor="Black" ForeColor="Black"></asp:TextBox>
             <asp:Button ID="btnFind" runat="server" OnClick="Button1_Click" Text="Find" CssClass="auto-style23" BorderColor="#51EC60" Font-Bold="True" style="border-radius: 16px;"/>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtReason" runat="server" CssClass="auto-style2" BorderStyle="Solid" Height="28px" placeholder="Please enter holiday reason " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
+            <asp:TextBox ID="txtReason" runat="server" CssClass="auto-style2" BorderStyle="Solid" Height="28px" placeholder="Please enter holiday reason " BorderColor="Black" ForeColor="Black" ></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtStartdate" runat="server" BorderStyle="Solid" CssClass="auto-style15" Height="28px" placeholder="Please enter start date i.e 03/23/2022 12:00:00 AM " BorderColor="Black" ForeColor="Black" style="border-radius: 10px;" OnTextChanged="txtStartdate_TextChanged"></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="txtEndate" runat="server" CssClass="auto-style14" BorderStyle="Solid" placeholder="Please enter end date i.e 03/23/2022 12:00:00 AM " Height="28px" BorderColor="Black" ForeColor="Black" style="border-radius: 10px;"></asp:TextBox>
             <br />
             <br />
-        <asp:Label ID="lblError" runat="server" CssClass="auto-style10" BackColor="Silver"></asp:Label>
+        <asp:Label ID="lblError" runat="server" CssClass="auto-style10" BackColor="Silver" Visible="False" style ="border-radius: 10px; " BorderColor="Red" BorderStyle="Solid" ForeColor="Black"></asp:Label>
             <br />
             <br />
             <br />
             <asp:Button ID="btnOk" runat="server" Text="Ok" Width="94px" OnClick="btnOk_Click" CssClass="auto-style13" BorderColor="#51EC60" Font-Bold="True" />
 &nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="96px" OnClick="btnCancel_Click" CssClass="auto-style12" BorderColor="Red" Font-Bold="True" />
-            <asp:Label ID="Label5" runat="server" BackColor="Silver" CssClass="auto-style30" Font-Size="Small" Text="i.e 03/23/2022 12:00:00 AM"></asp:Label>
+            <asp:Label ID="Label5" runat="server" BackColor="Silver" CssClass="auto-style30" Font-Size="Small" Text="i.e 1/1/0001 12:00:00 AM"></asp:Label>
+            <asp:TextBox ID="txtStartdate" runat="server" required BorderColor="Black" BorderStyle="Solid" placeholder="Please enter Start Date" CssClass="auto-style4" Height="28px"></asp:TextBox>
+            <asp:TextBox ID="txtEndate" runat="server" required BorderColor="Black" BorderStyle="Solid" placeholder="Please enter End Date" CssClass="auto-style31" Height="28px"></asp:TextBox>
         </div>
        
     </form>
