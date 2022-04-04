@@ -183,14 +183,14 @@ namespace DmsClasses
             //copy the date added value to date temp
             DateTemp = Convert.ToDateTime(startDate);
 
-            if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+            if (DateTemp < Convert.ToDateTime("1990, 03, 20 00:00:00.000"))
             {
                 //record the error
                 Error = Error + "The date cannot be so old : ";
             }
 
             //check to see if the date is greater than today's date
-            if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+            if (DateTemp > Convert.ToDateTime("2023, 03, 20 00:00:00.000"))
             {
                 //record the error
                 Error = Error + "The date cannot be in the future : ";
@@ -201,13 +201,13 @@ namespace DmsClasses
             {
                 //copy the dateAdded value to the DateTemp variable
                 DateTemp = Convert.ToDateTime(startDate);
-                if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+                if (DateTemp < Convert.ToDateTime("1990, 03, 20 00:00:00.000"))
                 {
                     //record the error
                     Error = Error + "The date cannot be in the past : ";
                 }
                 //check to see if the date is greater than today's date
-                if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+                if (DateTemp > Convert.ToDateTime("2023, 03, 20 00:00:00.000"))
                 {
                     //record the error
                     Error = Error + "The date cannot be in the future : ";
@@ -226,14 +226,14 @@ namespace DmsClasses
             //copy the date added value to date temp
             DateTemp = Convert.ToDateTime(enDate);
 
-            if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+            if (DateTemp < Convert.ToDateTime("1990, 03, 20 00:00:00.000"))
             {
                 //record the error
                 Error = Error + "The date cannot be so old : ";
             }
 
             //check to see if the date is greater than today's date
-            if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+            if (DateTemp > Convert.ToDateTime("2023, 03, 20 00:00:00.000"))
             {
                 //record the error
                 Error = Error + "The date cannot be in the future : ";
@@ -244,13 +244,13 @@ namespace DmsClasses
             {
                 //copy the dateAdded value to the DateTemp variable
                 DateTemp = Convert.ToDateTime(enDate);
-                if (DateTemp < Convert.ToDateTime("1990, 03, 20"))
+                if (DateTemp < Convert.ToDateTime("1990, 03, 2000:00:00.000"))
                 {
                     //record the error
                     Error = Error + "The date cannot be in the past : ";
                 }
                 //check to see if the date is greater than today's date
-                if (DateTemp > Convert.ToDateTime("2023, 03, 20"))
+                if (DateTemp > Convert.ToDateTime("2023, 03, 20 00:00:00.000"))
                 {
                     //record the error
                     Error = Error + "The date cannot be in the future : ";

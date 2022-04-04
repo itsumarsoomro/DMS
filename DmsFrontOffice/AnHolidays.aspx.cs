@@ -34,15 +34,15 @@ public partial class AnHolidays : System.Web.UI.Page
         //create an instance of the holidays
         DmsClasses.clsHolidaysCollection HolidayBook = new DmsClasses.clsHolidaysCollection();
         //validate the data on the web form
-        String Error = HolidayBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, Convert.ToDateTime(txtEndate.Text), Convert.ToDateTime(txtEndate.Text));
+        String Error = HolidayBook.ThisHolidays.Valid(Convert.ToString(txtName.Text), Convert.ToString(txtDepartment.Text), Convert.ToString(txtReason.Text), Convert.ToDateTime(txtStartdate.Text), Convert.ToDateTime(txtEndate.Text));
         //if the data is Ok then add it to the object
         if (Error == "")
         {
             
             //get the data entered by the user
-            HolidayBook.ThisHolidays.EmpName = txtName.Text;
-            HolidayBook.ThisHolidays.EmpDepart = txtDepartment.Text;
-            HolidayBook.ThisHolidays.Reason = txtReason.Text;
+            HolidayBook.ThisHolidays.EmpName = Convert.ToString(txtName.Text);
+            HolidayBook.ThisHolidays.EmpDepart = Convert.ToString(txtDepartment.Text);
+            HolidayBook.ThisHolidays.Reason = Convert.ToString(txtReason.Text);
             HolidayBook.ThisHolidays.StartDate = Convert.ToDateTime(txtStartdate.Text);
             HolidayBook.ThisHolidays.EndDate = Convert.ToDateTime(txtEndate.Text);
             //add the record
@@ -65,16 +65,16 @@ public partial class AnHolidays : System.Web.UI.Page
         //create an instance of the holiday book
         DmsClasses.clsHolidaysCollection HolidaysBook = new DmsClasses.clsHolidaysCollection();
         //validate the data on the web form
-        String Error = HolidaysBook.ThisHolidays.Valid(txtName.Text, txtDepartment.Text, txtReason.Text, Convert.ToDateTime(txtStartdate.Text), Convert.ToDateTime(txtEndate.Text));
+        String Error = HolidaysBook.ThisHolidays.Valid(Convert.ToString(txtName.Text), Convert.ToString(txtDepartment.Text), Convert.ToString(txtReason.Text), Convert.ToDateTime(txtStartdate.Text), Convert.ToDateTime(txtEndate.Text));
         //if the data is OK then add it to the object
         if (Error == "")
         {
             //find the record to update
             HolidaysBook.ThisHolidays.Find(EmpID);
             //get the data entered by the user
-            HolidaysBook.ThisHolidays.EmpName = txtName.Text;
-            HolidaysBook.ThisHolidays.EmpDepart = txtDepartment.Text;
-            HolidaysBook.ThisHolidays.Reason = txtReason.Text;
+            HolidaysBook.ThisHolidays.EmpName = Convert.ToString(txtName.Text);
+            HolidaysBook.ThisHolidays.EmpDepart = Convert.ToString(txtDepartment.Text);
+            HolidaysBook.ThisHolidays.Reason = Convert.ToString(txtReason.Text);
             HolidaysBook.ThisHolidays.StartDate = Convert.ToDateTime(txtStartdate.Text);
             HolidaysBook.ThisHolidays.EndDate = Convert.ToDateTime(txtEndate.Text);
             //update the record
