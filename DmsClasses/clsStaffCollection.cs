@@ -51,28 +51,28 @@ namespace DmsClasses
         public object mTestList { get; private set; }
 
         //CONSTRUCTOR FOR THE CLASS
-        public clsStaffCollection()
-        {
-            //create ab instance of the class we want to create
-            clsStaffCollection TestItem = new clsStaffCollection();
-            //set its properties
-            //TestItem.Active = true;
-            TestItem.StaffNo = 1;
-            TestItem.Password = "xxxxxxxxxx";
-            TestItem.Address = "some road";
-            TestItem.StaffID = "3";
-            //add the item to the test list
-            mTestList.Add(TestItem);
-            //re initialise the object for some new data
-            TestItem = new clsStaff();
-            //set iyts properties
-            TestItem.StaffNo = 1;
-            TestItem.Password = "xxxxxxxxxx";
-            TestItem.Address = "some road";
-            TestItem.StaffID = "3";
-            //add the item to the test list
-            mStaffList.Add(TestItem);
-        }
+        //public clsStaffCollection()
+        //{
+        //    //create ab instance of the class we want to create
+        //    clsStaffCollection TestItem = new clsStaffCollection();
+        //    //set its properties
+        //    //TestItem.Active = true;
+        //    TestItem.StaffNo = 1;
+        //    TestItem.Password = "xxxxxxxxxx";
+        //    TestItem.Address = "some road";
+        //    TestItem.StaffID = "3";
+        //    //add the item to the test list
+        //    mTestList.Add(TestItem);
+        //    //re initialise the object for some new data
+        //    TestItem = new clsStaff();
+        //    //set iyts properties
+        //    TestItem.StaffNo = 1;
+        //    TestItem.Password = "xxxxxxxxxx";
+        //    TestItem.Address = "some road";
+        //    TestItem.StaffID = "3";
+        //    //add the item to the test list
+        //    mStaffList.Add(TestItem);
+        //}
 
 
 
