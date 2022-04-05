@@ -65,8 +65,9 @@ public partial class HolidaysDefault : System.Web.UI.Page
         }
         else //if no record has been selected
         {
+            lblError.Visible = true;
             //display an error
-            lblError.Text = "Please select a record to delete from the list";
+            lblError.Text = "Please select a record to Delete from the list!!!";
 
         }
     }
@@ -87,8 +88,9 @@ public partial class HolidaysDefault : System.Web.UI.Page
         }
         else //if no record has been selected
         {
+            lblError.Visible = true;
             //display an error
-            lblError.Text = "Please select a holiday record to Edit from the list";
+            lblError.Text = "Please select a holiday record to Edit from the list!!!";
         }
     }
 
@@ -102,10 +104,7 @@ public partial class HolidaysDefault : System.Web.UI.Page
         Response.Redirect("HolidaysPositions.aspx");
     }
 
-    protected void btnDisplayAll_Click(object sender, EventArgs e)
-    {
-
-    }
+ 
 
     protected void btnApplyAll_Click(object sender, EventArgs e)
     {
@@ -165,7 +164,7 @@ public partial class HolidaysDefault : System.Web.UI.Page
 
             //set up a new object of class list item 
 
-            ListItem NewItem = new ListItem(EmpID + " : EmpID" + " | " + "EmpName: " + EmpName + " |" + " EmpDepart: " + EmpDepart + " |" + " Reason: " + Reason + " |" + " StartDAte: " + StartDate + " |" + " EndDate: " + EnDate);
+            ListItem NewItem = new ListItem( "EmpID: "+ EmpID +" | " + "EmpName: " + EmpName + " |" + " EmpDepart: " + EmpDepart + " |" + " Reason: " + Reason + " |" + " StartDAte: " + StartDate + " |" + " EndDate: " + EnDate);
 
             //add the new item to the list
 
@@ -176,5 +175,10 @@ public partial class HolidaysDefault : System.Web.UI.Page
         }
         //return the number of records found
         return RecordCount;
+    }
+
+    protected void lstHolidays_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }

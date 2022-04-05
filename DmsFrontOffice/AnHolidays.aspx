@@ -42,7 +42,7 @@
             z-index: 1;
             width: 280px;
             left: 73px;
-            top: 200px;
+            top: 202px;
         }
         .auto-style10 {
             position: absolute;

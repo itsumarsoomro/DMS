@@ -9,6 +9,7 @@
 
      <link  rel="stylesheet" type="text/css" href="HolidaysDefaultStyleSheet.css" />
     <style type="text/css">
+      
         .auto-style1 {
             width: 500px;
             height: 436px;
@@ -42,6 +43,29 @@
             height: 29px;
             border-radius: 16px;
         }
+        .auto-style5 {
+            position: absolute;
+            left: 605px;
+            top: 517px;
+        }
+        .auto-style5:hover {
+         
+            border-color: #51EC60;
+        
+        }
+        .auto-style6 {
+            position: absolute;
+            left: 606px;
+            top: 478px;
+            width: 246px;
+        }
+        .auto-style7 {
+            position: absolute;
+            left: 608px;
+            top: 417px;
+            width: 301px;
+            height: 24px;
+        }
     </style>
 </head>
 <body>
@@ -65,25 +89,25 @@
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:ListBox ID="lstHolidays" runat="server" Height="185px" Width="310px" BackColor="White" Font-Bold="True" ForeColor="Black" style=" overflow: scroll;"></asp:ListBox>
+        <asp:ListBox ID="lstHolidays" runat="server" Height="185px" Width="310px" BackColor="White" Font-Bold="True" ForeColor="Black" style=" overflow: auto; overflow-y: auto;"></asp:ListBox>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblError" runat="server" BackColor="Silver" Text="[lblError]"></asp:Label>
+        <asp:Label ID="lblError" runat="server" BackColor="Silver" Text="[lblError]" CssClass="auto-style7" ForeColor="Red" Visible="False"></asp:Label>
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="lblEmpID" runat="server" BackColor="Silver" Font-Bold="True" Text="Please Enter Employee ID#"></asp:Label>
+        <asp:Label ID="lblEmpID" runat="server" BackColor="Silver" Font-Bold="True" Text="Please Enter Holiday Reason!"></asp:Label>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtboxEmpID" runat="server" Height="24px" Width="181px"></asp:TextBox>
+        <asp:TextBox ID="txtboxEmpID" runat="server" Height="24px" BorderStyle="Solid" CssClass="auto-style6"></asp:TextBox>
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnApplyAll" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="28px" Text="Apply All" Width="95px" style="border-radius: 16px;" OnClick="btnApplyAll_Click"/>
+        <asp:Button ID="btnApplyAll" runat="server" Font-Bold="True" Height="28px" Text="Apply/Display All" Width="152px" style="border-radius: 16px;" OnClick="btnApplyAll_Click" CssClass="auto-style5" BorderStyle="Solid"/>
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnDisplayAll" runat="server" BorderColor="Black" BorderStyle="Solid" Font-Bold="True" Height="28px" Text="Display All" Width="95px" style="border-radius: 16px;" OnClick="btnDisplayAll_Click" />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="btnAdd" runat="server" BorderColor="#51EC60" BorderStyle="Solid" Font-Bold="True" Height="30px" OnClick="btnAdd_Click" Text="Add +" Width="67px" style="border-radius: 16px;" />
